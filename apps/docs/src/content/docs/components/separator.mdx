@@ -9,12 +9,10 @@ description: Creates a visual or semantic distinction between content.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/separator?raw';
+import importedCode from '@zemkit/reusables/components/ui/separator?raw';
 
-<LinkButton href="/primitives/separator">
-  Separator Primitive
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/separator">
+<LinkButton href='/primitives/separator'>Separator Primitive</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/separator'>
   Demo
 </LinkButton>
 
@@ -24,14 +22,18 @@ Creates a visual or semantic distinction between content.
 
 ## Installation
 
-<Aside type="tip" title="Dependencies">
-  Before copy/pasting, add the <a href='/primitives/separator' className='text-white font-bold'> separator primitive</a> to your project.
+<Aside type='tip' title='Dependencies'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/separator' className='text-white font-bold'>
+    {' '}
+    separator primitive
+  </a>{' '}
+  to your project.
 </Aside>
-
 
 **Copy/paste the following code to `~/components/ui/separator.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/ui/separator.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/separator.tsx' />
 
 ## Usage
 
@@ -70,8 +72,8 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|   Prop   |  Type   |     Note     |
-| :------: | :-----: | :----------: |
-| orientation  | 'horizontal' \| 'vertical' | Defaults to `horizontal` _(optional)_|
-| decorative  | boolean |_(optional)_ |
-| asChild  | boolean | _(optional)_ |
+|    Prop     |            Type            |                 Note                  |
+| :---------: | :------------------------: | :-----------------------------------: |
+| orientation | 'horizontal' \| 'vertical' | Defaults to `horizontal` _(optional)_ |
+| decorative  |          boolean           |             _(optional)_              |
+|   asChild   |          boolean           |             _(optional)_              |

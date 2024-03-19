@@ -9,10 +9,10 @@ description: Shows a menu activated by either a right-click or a long-press.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
-import importedNativeCode from '@/../node_modules/@rnr/context-menu/src/context-menu.tsx?raw';
-import importedWebCode from '@/../node_modules/@rnr/context-menu/src/context-menu.web.tsx?raw';
-import importedTypesCode from '@/../node_modules/@rnr/context-menu/src/types.ts?raw';
-import importedIndexCode from '@/../node_modules/@rnr/context-menu/src/index.ts?raw';
+import importedNativeCode from '@/../node_modules/@zemkit/context-menu/src/context-menu.tsx?raw';
+import importedWebCode from '@/../node_modules/@zemkit/context-menu/src/context-menu.web.tsx?raw';
+import importedTypesCode from '@/../node_modules/@zemkit/context-menu/src/types.ts?raw';
+import importedIndexCode from '@/../node_modules/@zemkit/context-menu/src/index.ts?raw';
 
 <LinkButton href='/primitives/hooks'>Hooks Primitives</LinkButton>
 <LinkButton href='/primitives/portal'>Portal Primitives</LinkButton>
@@ -32,12 +32,12 @@ Shows a menu activated by either a right-click or a long-press.
 <Aside title="Uses shared primitives">
   If you do not already have these primitives in your project, you will need to add them.
 
-  - [Hooks Primitive](/primitives/hooks)
-  - [Portal Primitive](/primitives/portal)
-  - [Slot Primitive](/primitives/slot)
-  - [Types Primitive](/primitives/types)
-  - [Utils Primitive](/primitives/utils)
-</Aside>
+- [Hooks Primitive](/primitives/hooks)
+- [Portal Primitive](/primitives/portal)
+- [Slot Primitive](/primitives/slot)
+- [Types Primitive](/primitives/types)
+- [Utils Primitive](/primitives/utils)
+  </Aside>
 
 <Tabs>
   <TabItem label="Universal">
@@ -62,6 +62,7 @@ Shows a menu activated by either a right-click or a long-press.
     **Copy/paste the following code for exporting to  `~/components/primitives/context-menu/index.ts`**
 
     <Code code={importedIndexCode} lang="tsx" title="~/components/primitives/context-menu/index.ts" />
+
   </TabItem>
   <TabItem label="Native Only">
     **Copy/paste the following code for native to  `~/components/primitives/context-menu/index.tsx`**
@@ -71,6 +72,7 @@ Shows a menu activated by either a right-click or a long-press.
     **Copy/paste the following code for types to  `~/components/primitives/context-menu/types.ts`**
 
     <Code code={importedTypesCode} lang="tsx" title="~/components/primitives/context-menu/types.ts" />
+
   </TabItem>
 </Tabs>
 
@@ -78,21 +80,21 @@ Shows a menu activated by either a right-click or a long-press.
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 
@@ -181,7 +183,7 @@ function Example() {
                     <Text>Foghorn Leghorn</Text>
                   </ContextMenu.RadioItem>
                 </ContextMenu.RadioGroup>
-              </ContextMenu.Content>  
+              </ContextMenu.Content>
             </ContextMenuPrimitive.Overlay>
           </ContextMenuPrimitive.Portal>
     </ContextMenu.Root>
@@ -195,12 +197,12 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|     open*    |         boolean          |                         |
-| onOpenChange*| (open: boolean) => void  |                         |
-|   asChild    |         boolean          |       _(optional)_      |
-|  relativeTo  | 'longPress' \| 'trigger' | Native Only_(optional)_ |
+|      Prop      |           Type           |          Note           |
+| :------------: | :----------------------: | :---------------------: |
+|     open\*     |         boolean          |                         |
+| onOpenChange\* | (open: boolean) => void  |                         |
+|    asChild     |         boolean          |      _(optional)_       |
+|   relativeTo   | 'longPress' \| 'trigger' | Native Only*(optional)* |
 
 ### Trigger
 
@@ -273,90 +275,90 @@ Extends [`Text`](https://reactnative.dev/docs/text#props) props
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| asChild | boolean | _(optional)_ |
-| textValue | boolean | _(optional)_ |
+|     Prop     |  Type   |     Note     |
+| :----------: | :-----: | :----------: |
+|   asChild    | boolean | _(optional)_ |
+|  textValue   | boolean | _(optional)_ |
 | closeOnPress | boolean | _(optional)_ |
 
 ### CheckboxItem
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|     Prop     |           Type           |           Note          |
-| :----------: | :----------------------: | :---------------------: |
-|   checked*   |         boolean          |                         |
-|onCheckedChange*| (value: boolean) => void |                       |
-|   textValue* |         string           |                         |
-|  asChild     |         boolean          |       _(optional)_      |
-| closeOnPress |         boolean          | Native Only_(optional)_ |
+|       Prop        |           Type           |          Note           |
+| :---------------: | :----------------------: | :---------------------: |
+|     checked\*     |         boolean          |                         |
+| onCheckedChange\* | (value: boolean) => void |                         |
+|    textValue\*    |          string          |                         |
+|      asChild      |         boolean          |      _(optional)_       |
+|   closeOnPress    |         boolean          | Native Only*(optional)* |
 
 ### RadioGroup
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |           Note          |
-| :----------: | :----------------------: | :---------------------: |
-|   value*   |         boolean          |                         |
-|onValueChange*| (value: boolean) => void |                         |
-|  asChild     |         boolean          |       _(optional)_      |
+|      Prop       |           Type           |     Note     |
+| :-------------: | :----------------------: | :----------: |
+|     value\*     |         boolean          |              |
+| onValueChange\* | (value: boolean) => void |              |
+|     asChild     |         boolean          | _(optional)_ |
 
 ### RadioItem
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|     Prop     |           Type           |           Note          |
-| :----------: | :----------------------: | :---------------------: |
-|   value*     |         boolean          |                         |
-|onCheckedChange*| (value: boolean) => void |                       |
-|  asChild     |         boolean          |       _(optional)_      |
-| closeOnPress |         boolean          | Native Only_(optional)_ |
+|       Prop        |           Type           |          Note           |
+| :---------------: | :----------------------: | :---------------------: |
+|      value\*      |         boolean          |                         |
+| onCheckedChange\* | (value: boolean) => void |                         |
+|      asChild      |         boolean          |      _(optional)_       |
+|   closeOnPress    |         boolean          | Native Only*(optional)* |
 
 ### ItemIndicator
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| asChild | boolean | _(optional)_ |
-| forceMount | true /| undefined | _(optional)_ |
+|    Prop    |  Type   |     Note     |
+| :--------: | :-----: | :----------: | ------------ |
+|  asChild   | boolean | _(optional)_ |
+| forceMount | true /  |  undefined   | _(optional)_ |
 
 ### Separator
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| asChild | boolean | _(optional)_ |
+|    Prop    |  Type   |     Note     |
+| :--------: | :-----: | :----------: |
+|  asChild   | boolean | _(optional)_ |
 | decorative | boolean | _(optional)_ |
 
 ### Sub
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|   asChild    |         boolean          | _(optional)_ |
-|     open*    |         boolean          |              |
-| onOpenChange*| (value: boolean) => void |              |
+|      Prop      |           Type           |     Note     |
+| :------------: | :----------------------: | :----------: |
+|    asChild     |         boolean          | _(optional)_ |
+|     open\*     |         boolean          |              |
+| onOpenChange\* | (value: boolean) => void |              |
 
 ### SubTrigger
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| textValue | string | _(optional)_ |
-| asChild | boolean | _(optional)_ |
+|   Prop    |  Type   |     Note     |
+| :-------: | :-----: | :----------: |
+| textValue | string  | _(optional)_ |
+|  asChild  | boolean | _(optional)_ |
 
 ### SubContent
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| asChild | boolean | _(optional)_ |
-| forceMount | true /| undefined | _(optional)_ |
+|    Prop    |  Type   |     Note     |
+| :--------: | :-----: | :----------: | ------------ |
+|  asChild   | boolean | _(optional)_ |
+| forceMount | true /  |  undefined   | _(optional)_ |
 
 ### useRootContext
 

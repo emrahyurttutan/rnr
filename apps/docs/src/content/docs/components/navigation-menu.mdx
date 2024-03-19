@@ -9,7 +9,7 @@ description: Shows a collection of navigation links.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/navigation-menu?raw';
+import importedCode from '@zemkit/reusables/components/ui/navigation-menu?raw';
 
 <LinkButton href='/primitives/navigation-menu'>Navigation Menu Primitive</LinkButton>
 <LinkButton target='_blank' href='https://rnr-showcase.vercel.app/navigation-menu'>
@@ -23,7 +23,12 @@ Shows a collection of navigation links.
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/navigation-menu' className='text-white font-bold'> navigation-menu primitive</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/navigation-menu' className='text-white font-bold'>
+    {' '}
+    navigation-menu primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -36,21 +41,21 @@ Shows a collection of navigation links.
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 

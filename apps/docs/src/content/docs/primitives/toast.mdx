@@ -9,8 +9,8 @@ description: A concise message that appears briefly.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@/../node_modules/@rnr/toast/src/toast.tsx?raw';
-import importedTypesCode from '@/../node_modules/@rnr/toast/src/types.ts?raw';
+import importedCode from '@/../node_modules/@zemkit/toast/src/toast.tsx?raw';
+import importedTypesCode from '@/../node_modules/@zemkit/toast/src/types.ts?raw';
 
 <LinkButton href='/primitives/slot'>Slot Primitives</LinkButton>
 <LinkButton href='/primitives/types'>Types Primitives</LinkButton>
@@ -24,39 +24,38 @@ A concise message that appears briefly.
 <Aside title="Uses shared primitives">
   If you do not already have these primitives in your project, you will need to add them.
 
-  - [Slot Primitive](/primitives/slot)
-  - [Types Primitive](/primitives/types)
-  
-</Aside>
+- [Slot Primitive](/primitives/slot)
+- [Types Primitive](/primitives/types)
 
+</Aside>
 
 **Copy/paste the following code to `~/components/primitives/toast/index.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/primitives/toast/index.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/primitives/toast/index.tsx' />
 
 **Copy/paste the following code to `~/components/primitives/toast/types.ts`**
 
-<Code code={importedTypesCode} lang="tsx" title="~/components/primitives/toast/types.ts" />
+<Code code={importedTypesCode} lang='tsx' title='~/components/primitives/toast/types.ts' />
 
 ## Usage
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 
@@ -151,12 +150,12 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| open    | boolean |              |
-| onOpenChange | (open: boolean) => void |              |
-| type | 'foreground' \| 'background' | defaults to `foreground` _(optional)_ |
-| asChild | boolean | _(optional)_ |
+|     Prop     |             Type             |                 Note                  |
+| :----------: | :--------------------------: | :-----------------------------------: |
+|     open     |           boolean            |                                       |
+| onOpenChange |   (open: boolean) => void    |                                       |
+|     type     | 'foreground' \| 'background' | defaults to `foreground` _(optional)_ |
+|   asChild    |           boolean            |             _(optional)_              |
 
 ### Action
 

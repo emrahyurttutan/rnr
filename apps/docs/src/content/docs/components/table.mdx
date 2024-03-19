@@ -9,13 +9,11 @@ description: Shows a table component.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/table?raw';
+import importedCode from '@zemkit/reusables/components/ui/table?raw';
 
-<LinkButton href="/primitives/table">
-  Table Primitive
-</LinkButton>
+<LinkButton href='/primitives/table'>Table Primitive</LinkButton>
 <LinkButton href='/components/text'>Text Component</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/table">
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/table'>
   Demo
 </LinkButton>
 
@@ -25,14 +23,22 @@ Shows a table component.
 
 ## Installation
 
-<Aside type="tip" title="Dependencies">
-  Before copy/pasting, add the <a href='/primitives/table' className='text-white font-bold'> table primitive</a> and the <a href='/components/text' className='text-white font-bold'>text component</a> to your project.
+<Aside type='tip' title='Dependencies'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/table' className='text-white font-bold'>
+    {' '}
+    table primitive
+  </a>{' '}
+  and the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
-
 
 **Copy/paste the following code to `~/components/ui/table.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/ui/table.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/table.tsx' />
 
 ## Usage
 

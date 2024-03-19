@@ -2,13 +2,14 @@
 title: Select
 description: Presents a selection of options for the user to choose from, activated by a button.
 ---
+
 {/* prettier-ignore-start */}
 {/* prettier-ignore-end */}
 
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/select?raw';
+import importedCode from '@zemkit/reusables/components/ui/select?raw';
 
 <LinkButton href='/primitives/select'>Select Primitive</LinkButton>
 <LinkButton target='_blank' href='https://rnr-showcase.vercel.app/select'>
@@ -22,7 +23,12 @@ Presents a selection of options for the user to choose from, activated by a butt
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/select' className='text-white font-bold'> select primitive</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/select' className='text-white font-bold'>
+    {' '}
+    select primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -35,21 +41,21 @@ Presents a selection of options for the user to choose from, activated by a butt
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 
@@ -114,19 +120,19 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|     defaultValue     |         option: \{ value: string, label: string \} \| undefined          | _(optional)_ |
-|     value     |         option: \{ value: string, label: string \} \| undefined          | _(optional)_ |
-| onValueChange | (option: \{ value: string, label: string \} \| undefined ) => void | _(optional)_ |
-|  defaultOpen   |         boolean          | _(optional)_ |
-|     open     |         boolean          | _(optional)_ |
-| onOpenChange | (value: boolean) => void | _(optional)_ |
-|   disabled   |         boolean          | _(optional)_ |
-|   asChild    |         boolean          | _(optional)_ |
-|   dir    |         'ltr' \| 'rtl'          | Web only _(optional)_ |
-|   name    |         string          | Web only _(optional)_ |
-|   required    |         boolean          | Web only _(optional)_ |
+|     Prop      |                                Type                                |         Note          |
+| :-----------: | :----------------------------------------------------------------: | :-------------------: |
+| defaultValue  |      option: \{ value: string, label: string \} \| undefined       |     _(optional)_      |
+|     value     |      option: \{ value: string, label: string \} \| undefined       |     _(optional)_      |
+| onValueChange | (option: \{ value: string, label: string \} \| undefined ) => void |     _(optional)_      |
+|  defaultOpen  |                              boolean                               |     _(optional)_      |
+|     open      |                              boolean                               |     _(optional)_      |
+| onOpenChange  |                      (value: boolean) => void                      |     _(optional)_      |
+|   disabled    |                              boolean                               |     _(optional)_      |
+|    asChild    |                              boolean                               |     _(optional)_      |
+|      dir      |                           'ltr' \| 'rtl'                           | Web only _(optional)_ |
+|     name      |                               string                               | Web only _(optional)_ |
+|   required    |                              boolean                               | Web only _(optional)_ |
 
 ### SelectTrigger
 
@@ -136,55 +142,49 @@ Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 | :-----: | :-----: | :----------: |
 | asChild | boolean | _(optional)_ |
 
-
 ### SelectContent
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|         Prop         |        Type         |         Note          |
-| :------------------: | :-----------------: | :-------------------: |
-|       asChild        |       boolean       |     _(optional)_      |
-|      forceMount      |  true \| undefined  |     _(optional)_      |
-|       alignOffset       |                    number                    |     _(optional)_       |
-|         insets          |                    Insets                    |     _(optional)_       |
-|     avoidCollisions     |                   boolean                    |     _(optional)_       |
-|          align          |         'start' \| 'center' \| 'end'         |     _(optional)_       |
-|          side           |              'top' \| 'bottom'               |     _(optional)_       |
-|       sideOffset        |                    number                    |     _(optional)_       |
-| disablePositioningStyle |                   boolean                    |     Native Only _(optional)_       |
-|   position    | 'popper' \| 'item-aligned' \| undefined | Web Only _(optional)_ |
-
+|          Prop           |                  Type                   |           Note           |
+| :---------------------: | :-------------------------------------: | :----------------------: |
+|         asChild         |                 boolean                 |       _(optional)_       |
+|       forceMount        |            true \| undefined            |       _(optional)_       |
+|       alignOffset       |                 number                  |       _(optional)_       |
+|         insets          |                 Insets                  |       _(optional)_       |
+|     avoidCollisions     |                 boolean                 |       _(optional)_       |
+|          align          |      'start' \| 'center' \| 'end'       |       _(optional)_       |
+|          side           |            'top' \| 'bottom'            |       _(optional)_       |
+|       sideOffset        |                 number                  |       _(optional)_       |
+| disablePositioningStyle |                 boolean                 | Native Only _(optional)_ |
+|        position         | 'popper' \| 'item-aligned' \| undefined |  Web Only _(optional)_   |
 
 ### SelectItem
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| value | string |                 |
-| label | string |                 |
+|     Prop     |  Type   |     Note     |
+| :----------: | :-----: | :----------: |
+|    value     | string  |              |
+|    label     | string  |              |
 | closeOnPress | boolean | _(optional)_ |
-| asChild | boolean | _(optional)_ |
-
+|   asChild    | boolean | _(optional)_ |
 
 ### SelectGroup
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-
 ### SelectLabel
 
 Extends [`Text`](https://reactnative.dev/docs/text#props) props
-
 
 ### SelectSeparator
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| value | string |                 |
-| label | string |                 |
+|     Prop     |  Type   |     Note     |
+| :----------: | :-----: | :----------: |
+|    value     | string  |              |
+|    label     | string  |              |
 | closeOnPress | boolean | _(optional)_ |
-| asChild | boolean | _(optional)_ |
-
+|   asChild    | boolean | _(optional)_ |

@@ -9,11 +9,11 @@ description: Shows an accessible table component.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@/../node_modules/@rnr/table/src/table.tsx?raw';
+import importedCode from '@/../node_modules/@zemkit/table/src/table.tsx?raw';
 
 <LinkButton href='/primitives/slot'>Slot Primitives</LinkButton>
 <LinkButton href='/primitives/types'>Types Primitives</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/table">
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/table'>
   Demo
 </LinkButton>
 
@@ -26,15 +26,14 @@ Shows an accessible table component.
 <Aside title="Uses shared primitives">
   If you do not already have these primitives in your project, you will need to add them.
 
-  - [Slot Primitive](/primitives/slot)
-  - [Types Primitive](/primitives/types)
-  
-</Aside>
+- [Slot Primitive](/primitives/slot)
+- [Types Primitive](/primitives/types)
 
+</Aside>
 
 **Copy/paste the following code to `~/components/primitives/table.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/primitives/table.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/primitives/table.tsx' />
 
 ## Usage
 
@@ -82,18 +81,15 @@ function Example() {
               <Text>Total</Text>
             </TablePrimitive.Cell>
             <TablePrimitive.Cell>
-                <Text>$250.00</Text>
+              <Text>$250.00</Text>
             </TablePrimitive.Cell>
           </TablePrimitive.Row>
         </TablePrimitive.Footer>
-        <Text nativeID='invoice-table'>
-          A list of your recent invoices.
-        </Text>
+        <Text nativeID='invoice-table'>A list of your recent invoices.</Text>
       </TablePrimitive.Body>
     </TablePrimitive.Root>
   );
 }
-
 ```
 
 ## Props

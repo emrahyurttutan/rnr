@@ -9,12 +9,10 @@ description: Presents content within a chosen aspect ratio.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/aspect-ratio?raw';
+import importedCode from '@zemkit/reusables/components/ui/aspect-ratio?raw';
 
-<LinkButton href="/primitives/aspect-ratio">
-  Aspect-Ratio Primitive
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/aspect-ratio">
+<LinkButton href='/primitives/aspect-ratio'>Aspect-Ratio Primitive</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/aspect-ratio'>
   Demo
 </LinkButton>
 
@@ -24,16 +22,19 @@ Presents content within a chosen aspect ratio.
 
 ### Installation
 
-<Aside type="tip" title="Dependency">
-    Before copy/pasting, add the <a href="/primitives/aspect-ratio" className='text-white font-bold'>aspect-ratio primitive</a> to your project.
+<Aside type='tip' title='Dependency'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/aspect-ratio' className='text-white font-bold'>
+    aspect-ratio primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
 
 **Copy/paste the following code to `~/components/ui/aspect-ratio.tsx`:**
 
-
-<Code code={importedCode} lang="tsx" title="~/components/ui/aspect-ratio.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/aspect-ratio.tsx' />
 
 ### Usage
 
@@ -41,11 +42,10 @@ Presents content within a chosen aspect ratio.
 import { AspectRatio } from '~/components/ui/aspect-ratio';
 
 function Example() {
-  return (
-      <AspectRatio ratio={16 / 9} />
-  );
+  return <AspectRatio ratio={16 / 9} />;
 }
 ```
+
 ## Props
 
 ### AspectRatio

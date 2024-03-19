@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/toast",
+  "name": "@zemkit/toast",
   "version": "0.0.0",
   "description": "Primitive toast",
   "license": "MIT",
@@ -12,8 +12,8 @@
     "clean": "rm -rf node_modules"
   },
   "dependencies": {
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

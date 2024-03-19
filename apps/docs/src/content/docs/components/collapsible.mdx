@@ -9,12 +9,10 @@ description: A dynamic element that facilitates the expansion or collapse of a p
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/collapsible?raw';
+import importedCode from '@zemkit/reusables/components/ui/collapsible?raw';
 
-<LinkButton href="/primitives/collapsible">
-  Collapsible Primitive
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/collapsible">
+<LinkButton href='/primitives/collapsible'>Collapsible Primitive</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/collapsible'>
   Demo
 </LinkButton>
 
@@ -24,16 +22,19 @@ A dynamic element that facilitates the expansion or collapse of a panel.
 
 ### Installation
 
-<Aside type="tip" title="Dependency">
-    Before copy/pasting, add the <a href="/primitives/collapsible" className='text-white font-bold'>Collapsible primitive</a> to your project.
+<Aside type='tip' title='Dependency'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/collapsible' className='text-white font-bold'>
+    Collapsible primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
 
 **Copy/paste the following code to `~/components/ui/collapsible.tsx`:**
 
-
-<Code code={importedCode} lang="tsx" title="~/components/ui/collapsible.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/collapsible.tsx' />
 
 ## Usage
 
@@ -73,9 +74,9 @@ Extends [`View`](https://reactnative.dev/docs/view#props) props
 
 Extends [`Pessable`](https://reactnative.dev/docs/pressable#props) props
 
-|   Prop   |  Type   |     Note     |
-| :------: | :-----: | :----------: |
-| asChild  | boolean | _(optional)_ |
+|  Prop   |  Type   |     Note     |
+| :-----: | :-----: | :----------: |
+| asChild | boolean | _(optional)_ |
 
 ### CollapsibleContent
 

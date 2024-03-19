@@ -1,19 +1,19 @@
 import * as React from 'react';
 import { Pressable, View, type GestureResponderEvent } from 'react-native';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type {
   AccordionContentProps,
   AccordionItemProps,
   AccordionRootProps,
   RootContext,
 } from './types';
-import { useControllableState } from '@rnr/hooks';
+import { useControllableState } from '@zemkit/hooks';
 
 const AccordionContext = React.createContext<RootContext | null>(null);
 

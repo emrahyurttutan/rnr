@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Pressable, Text, View, type GestureResponderEvent } from 'react-native';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
@@ -8,7 +8,7 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type { ToastRootProps } from './types';
 
 interface RootContext extends ToastRootProps {

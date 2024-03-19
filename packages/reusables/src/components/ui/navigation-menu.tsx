@@ -1,4 +1,4 @@
-import * as NavigationMenuPrimitive from '@rnr/navigation-menu';
+import * as NavigationMenuPrimitive from '@zemkit/navigation-menu';
 import { cva } from 'class-variance-authority';
 import * as React from 'react';
 import { Platform, View } from 'react-native';

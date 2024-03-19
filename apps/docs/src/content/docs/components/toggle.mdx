@@ -9,7 +9,7 @@ description: A button with a true or false state, which can be activated or deac
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/toggle?raw';
+import importedCode from '@zemkit/reusables/components/ui/toggle?raw';
 
 <LinkButton href='/primitives/toggle'>Toggle Primitive</LinkButton>
 <LinkButton href='/components/text'>Text Component</LinkButton>
@@ -24,7 +24,15 @@ A button with a true or false state, which can be activated or deactivated by to
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/toggle' className='text-white font-bold'>toggle primitive</a> and the <a href='/components/text' className='text-white font-bold'>text component</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/toggle' className='text-white font-bold'>
+    toggle primitive
+  </a>{' '}
+  and the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -64,19 +72,19 @@ function Example() {
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|   Prop   |  Type   |     Note     |
-| :------: | :-----: | :----------: |
-| pressed  | boolean | |
-| onPressedChange  | (val: boolean) => void | |
-| asChild  | boolean | _(optional)_ |
-| disabled  | boolean | _(optional)_ |
-| variant | 'default' \| 'outline' | _(optional)_ |
-| size | 'default' \| 'sm' \| 'lg' | _(optional)_ |
+|      Prop       |           Type            |     Note     |
+| :-------------: | :-----------------------: | :----------: |
+|     pressed     |          boolean          |              |
+| onPressedChange |  (val: boolean) => void   |              |
+|     asChild     |          boolean          | _(optional)_ |
+|    disabled     |          boolean          | _(optional)_ |
+|     variant     |  'default' \| 'outline'   | _(optional)_ |
+|      size       | 'default' \| 'sm' \| 'lg' | _(optional)_ |
 
 ### ToggleIcon
 
 Extends [`LucideIcon`](https://lucide.dev/guide/packages/lucide-react-native#props) props
 
-|    Prop    |        Type        |     Note     |
-| :--------: | :----------------: | :----------: |
-|  icon      |     LucideIcon     |              |
+| Prop |    Type    | Note |
+| :--: | :--------: | :--: |
+| icon | LucideIcon |      |

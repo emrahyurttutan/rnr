@@ -1,21 +1,21 @@
 import * as HoverCard from '@radix-ui/react-hover-card';
 import * as React from 'react';
 import { Pressable, View } from 'react-native';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   PositionedContentProps,
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type {
   HoverCardOverlayProps,
   HoverCardPortalProps,
   HoverCardRootProps,
   RootContext,
 } from './types';
-import { useControllableState } from '@rnr/hooks';
+import { useControllableState } from '@zemkit/hooks';
 
 const HoverCardContext = React.createContext<RootContext | null>(null);
 

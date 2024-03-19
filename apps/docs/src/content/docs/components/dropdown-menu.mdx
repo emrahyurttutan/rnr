@@ -9,7 +9,7 @@ description: Shows a menu with options or actions when a user clicks the trigger
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/dropdown-menu?raw';
+import importedCode from '@zemkit/reusables/components/ui/dropdown-menu?raw';
 
 <LinkButton href='/primitives/dropdown-menu'>Dropdown Menu Primitive</LinkButton>
 <LinkButton href='/components/text'>Text Component</LinkButton>
@@ -24,7 +24,16 @@ Shows a menu with options or actions when a user clicks the trigger button.
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/dropdown-menu' className='text-white font-bold'> dropdown-menu primitive</a> and the <a href='/components/text' className='text-white font-bold'>text component</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/dropdown-menu' className='text-white font-bold'>
+    {' '}
+    dropdown-menu primitive
+  </a>{' '}
+  and the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -37,21 +46,21 @@ Shows a menu with options or actions when a user clicks the trigger button.
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 
@@ -79,68 +88,68 @@ function Example() {
   const [openSub, setOpenSub] = React.useState(false);
 
   return (
-      <DropdownMenu
-        open={open}
-        onOpenChange={(newVal) => {
-          if (!newVal) {
-            setOpenSub(false);
-          }
-          setOpen(newVal);
-        }}
-      >
-        <DropdownMenuTrigger asChild>
-          <Button variant='outline'>
-            <Text>Open</Text>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent insets={contentInsets} className='w-64 native:w-72'>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <Text>Team</Text>
-            </DropdownMenuItem>
-            <DropdownMenuSub open={openSub} onOpenChange={setOpenSub}>
-              <DropdownMenuSubTrigger>
-                <Text>Invite users</Text>
-              </DropdownMenuSubTrigger>
-              <DropdownMenuSubContent>
-                <Animated.View entering={FadeIn.duration(200)}>
-                  <DropdownMenuItem>
-                    <Text>Email</Text>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Text>Message</Text>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>
-                    <Text>More...</Text>
-                  </DropdownMenuItem>
-                </Animated.View>
-              </DropdownMenuSubContent>
-            </DropdownMenuSub>
-            <DropdownMenuItem>
-              <Text>New Team</Text>
-              <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
+    <DropdownMenu
+      open={open}
+      onOpenChange={(newVal) => {
+        if (!newVal) {
+          setOpenSub(false);
+        }
+        setOpen(newVal);
+      }}
+    >
+      <DropdownMenuTrigger asChild>
+        <Button variant='outline'>
+          <Text>Open</Text>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent insets={contentInsets} className='w-64 native:w-72'>
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Text>GitHub</Text>
+            <Text>Team</Text>
           </DropdownMenuItem>
+          <DropdownMenuSub open={openSub} onOpenChange={setOpenSub}>
+            <DropdownMenuSubTrigger>
+              <Text>Invite users</Text>
+            </DropdownMenuSubTrigger>
+            <DropdownMenuSubContent>
+              <Animated.View entering={FadeIn.duration(200)}>
+                <DropdownMenuItem>
+                  <Text>Email</Text>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Text>Message</Text>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <Text>More...</Text>
+                </DropdownMenuItem>
+              </Animated.View>
+            </DropdownMenuSubContent>
+          </DropdownMenuSub>
           <DropdownMenuItem>
-            <Text>Support</Text>
+            <Text>New Team</Text>
+            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem disabled>
-            <Text>API</Text>
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <Text>Log out</Text>
-            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Text>GitHub</Text>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <Text>Support</Text>
+        </DropdownMenuItem>
+        <DropdownMenuItem disabled>
+          <Text>API</Text>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Text>Log out</Text>
+          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 ```
@@ -151,12 +160,12 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|     open*    |         boolean          |                         |
-| onOpenChange*| (value: boolean) => void |                         |
-|   asChild    |         boolean          |       _(optional)_      |
-|  relativeTo  | 'longPress' \| 'trigger' | Native Only_(optional)_ |
+|      Prop      |           Type           |          Note           |
+| :------------: | :----------------------: | :---------------------: |
+|     open\*     |         boolean          |                         |
+| onOpenChange\* | (value: boolean) => void |                         |
+|    asChild     |         boolean          |      _(optional)_       |
+|   relativeTo   | 'longPress' \| 'trigger' | Native Only*(optional)* |
 
 ### DropdownMenuTrigger
 
@@ -223,81 +232,81 @@ Extends [`Text`](https://reactnative.dev/docs/text#props) props
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| asChild | boolean | _(optional)_ |
-| textValue | boolean | _(optional)_ |
+|     Prop     |  Type   |     Note     |
+| :----------: | :-----: | :----------: |
+|   asChild    | boolean | _(optional)_ |
+|  textValue   | boolean | _(optional)_ |
 | closeOnPress | boolean | _(optional)_ |
 
 ### DropdownMenuCheckboxItem
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|     Prop     |           Type           |           Note          |
-| :----------: | :----------------------: | :---------------------: |
-|   checked*   |         boolean          |                         |
-|onCheckedChange*| (value: boolean) => void |                       |
-|   textValue* |         string           |                         |
-|  asChild     |         boolean          |       _(optional)_      |
-| closeOnPress |         boolean          | Native Only_(optional)_ |
+|       Prop        |           Type           |          Note           |
+| :---------------: | :----------------------: | :---------------------: |
+|     checked\*     |         boolean          |                         |
+| onCheckedChange\* | (value: boolean) => void |                         |
+|    textValue\*    |          string          |                         |
+|      asChild      |         boolean          |      _(optional)_       |
+|   closeOnPress    |         boolean          | Native Only*(optional)* |
 
 ### DropdownMenuRadioGroup
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |           Note          |
-| :----------: | :----------------------: | :---------------------: |
-|   value*   |         boolean          |                         |
-|onValueChange*| (value: boolean) => void |                         |
-|  asChild     |         boolean          |       _(optional)_      |
+|      Prop       |           Type           |     Note     |
+| :-------------: | :----------------------: | :----------: |
+|     value\*     |         boolean          |              |
+| onValueChange\* | (value: boolean) => void |              |
+|     asChild     |         boolean          | _(optional)_ |
 
 ### DropdownMenuRadioItem
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|     Prop     |           Type           |           Note          |
-| :----------: | :----------------------: | :---------------------: |
-|   value*     |         boolean          |                         |
-|onCheckedChange*| (value: boolean) => void |                       |
-|  asChild     |         boolean          |       _(optional)_      |
-| closeOnPress |         boolean          | Native Only_(optional)_ |
+|       Prop        |           Type           |          Note           |
+| :---------------: | :----------------------: | :---------------------: |
+|      value\*      |         boolean          |                         |
+| onCheckedChange\* | (value: boolean) => void |                         |
+|      asChild      |         boolean          |      _(optional)_       |
+|   closeOnPress    |         boolean          | Native Only*(optional)* |
 
 ### DropdownMenuSeparator
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| asChild | boolean | _(optional)_ |
+|    Prop    |  Type   |     Note     |
+| :--------: | :-----: | :----------: |
+|  asChild   | boolean | _(optional)_ |
 | decorative | boolean | _(optional)_ |
 
 ### DropdownMenuSub
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|   asChild    |         boolean          | _(optional)_ |
-|     open*    |         boolean          |              |
-| onOpenChange*| (value: boolean) => void |              |
+|      Prop      |           Type           |     Note     |
+| :------------: | :----------------------: | :----------: |
+|    asChild     |         boolean          | _(optional)_ |
+|     open\*     |         boolean          |              |
+| onOpenChange\* | (value: boolean) => void |              |
 
 ### DropdownMenuSubTrigger
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| textValue | string | _(optional)_ |
-| asChild | boolean | _(optional)_ |
+|   Prop    |  Type   |     Note     |
+| :-------: | :-----: | :----------: |
+| textValue | string  | _(optional)_ |
+|  asChild  | boolean | _(optional)_ |
 
 ### DropdownMenuSubContent
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| asChild | boolean | _(optional)_ |
-| forceMount | true /| undefined | _(optional)_ |
+|    Prop    |  Type   |     Note     |
+| :--------: | :-----: | :----------: | ------------ |
+|  asChild   | boolean | _(optional)_ |
+| forceMount | true /  |  undefined   | _(optional)_ |
 
 ### DropdownMenuShortcut
 

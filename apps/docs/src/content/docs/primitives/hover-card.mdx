@@ -9,10 +9,10 @@ description: Allows users with vision to preview the content hidden behind an el
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
-import importedNativeCode from '@/../node_modules/@rnr/hover-card/src/hover-card.tsx?raw';
-import importedWebCode from '@/../node_modules/@rnr/hover-card/src/hover-card.web.tsx?raw';
-import importedTypesCode from '@/../node_modules/@rnr/hover-card/src/types.ts?raw';
-import importedIndexCode from '@/../node_modules/@rnr/hover-card/src/index.ts?raw';
+import importedNativeCode from '@/../node_modules/@zemkit/hover-card/src/hover-card.tsx?raw';
+import importedWebCode from '@/../node_modules/@zemkit/hover-card/src/hover-card.web.tsx?raw';
+import importedTypesCode from '@/../node_modules/@zemkit/hover-card/src/types.ts?raw';
+import importedIndexCode from '@/../node_modules/@zemkit/hover-card/src/index.ts?raw';
 
 <LinkButton href='/primitives/hooks'>Hooks Primitives</LinkButton>
 <LinkButton href='/primitives/portal'>Portal Primitives</LinkButton>
@@ -31,11 +31,11 @@ Allows users with vision to preview the content hidden behind an element before 
 <Aside title="Uses shared primitives">
   If you do not already have these primitives in your project, you will need to add them.
 
-  - [Hooks Primitive](/primitives/hooks)
-  - [Portal Primitive](/primitives/portal)
-  - [Slot Primitive](/primitives/slot)
-  - [Types Primitive](/primitives/types)
-</Aside>
+- [Hooks Primitive](/primitives/hooks)
+- [Portal Primitive](/primitives/portal)
+- [Slot Primitive](/primitives/slot)
+- [Types Primitive](/primitives/types)
+  </Aside>
 
 <Tabs>
   <TabItem label="Universal">
@@ -60,6 +60,7 @@ Allows users with vision to preview the content hidden behind an element before 
     **Copy/paste the following code for exporting to  `~/components/primitives/hover-card/index.ts`**
 
     <Code code={importedIndexCode} lang="tsx" title="~/components/primitives/hover-card/index.ts" />
+
   </TabItem>
   <TabItem label="Native Only">
     **Copy/paste the following code for native to  `~/components/primitives/hover-card/index.tsx`**
@@ -69,6 +70,7 @@ Allows users with vision to preview the content hidden behind an element before 
     **Copy/paste the following code for types to  `~/components/primitives/hover-card/types.ts`**
 
     <Code code={importedTypesCode} lang="tsx" title="~/components/primitives/hover-card/types.ts" />
+
   </TabItem>
 </Tabs>
 
@@ -76,21 +78,21 @@ Allows users with vision to preview the content hidden behind an element before 
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 
@@ -100,24 +102,20 @@ import { Text, View } from 'react-native';
 
 function Example() {
   return (
-        <HoverCardPrimitive.Root>
-          <HoverCardPrimitive.Trigger>
-              <Text>@nextjs</Text>
-          </HoverCardPrimitive.Trigger>
-          <HoverCardPrimitive.Content>
-            <View>
-              <Text>@nextjs</Text>
-              <Text>
-                The React Framework – created and maintained by @vercel.
-              </Text>
-              <View>
-                <Text>
-                  Joined December 2021
-                </Text>
-              </View>
-            </View>
-          </HoverCardPrimitive.Content>
-        </HoverCardPrimitive.Root>
+    <HoverCardPrimitive.Root>
+      <HoverCardPrimitive.Trigger>
+        <Text>@nextjs</Text>
+      </HoverCardPrimitive.Trigger>
+      <HoverCardPrimitive.Content>
+        <View>
+          <Text>@nextjs</Text>
+          <Text>The React Framework – created and maintained by @vercel.</Text>
+          <View>
+            <Text>Joined December 2021</Text>
+          </View>
+        </View>
+      </HoverCardPrimitive.Content>
+    </HoverCardPrimitive.Root>
   );
 }
 ```
@@ -128,13 +126,13 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|     open     |         boolean          |       _(optional)_      |
-| onOpenChange | (value: boolean) => void |       _(optional)_      |
-| defaultOpen  |         boolean          |       _(optional)_      |
-|   asChild    |         boolean          |       _(optional)_      |
-|  relativeTo  | 'longPress' \| 'trigger' | Native Only_(optional)_ |
+|     Prop     |           Type           |          Note           |
+| :----------: | :----------------------: | :---------------------: |
+|     open     |         boolean          |      _(optional)_       |
+| onOpenChange | (value: boolean) => void |      _(optional)_       |
+| defaultOpen  |         boolean          |      _(optional)_       |
+|   asChild    |         boolean          |      _(optional)_       |
+|  relativeTo  | 'longPress' \| 'trigger' | Native Only*(optional)* |
 
 ### Trigger
 
@@ -166,20 +164,20 @@ Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|          Prop           |                     Type                     |           Note           |
-| :---------------------: | :------------------------------------------: | :----------------------: |
-|         asChild         |                   boolean                    |       _(optional)_       |
-|       forceMount        |              true \| undefined               |       _(optional)_       |
-|       alignOffset       |                    number                    |       _(optional)_       |
-|         insets          |                    Insets                    |       _(optional)_       |
-|     avoidCollisions     |                   boolean                    |       _(optional)_       |
-|          align          |         'start' \| 'center' \| 'end'         |       _(optional)_       |
-|          side           |              'top' \| 'bottom'               |       _(optional)_       |
-|       sideOffset        |                    number                    |       _(optional)_       |
-| disablePositioningStyle |                   boolean                    | Native Only _(optional)_ |
-|    collisionBoundary    |  Element \| null \| Array\<Element \| null>  |  Web Only _(optional)_   |
-|         sticky          |            'partial' \| 'always'             |  Web Only _(optional)_   |
-|    hideWhenDetached     |                   boolean                    |  Web Only _(optional)_   |
+|          Prop           |                    Type                    |           Note           |
+| :---------------------: | :----------------------------------------: | :----------------------: |
+|         asChild         |                  boolean                   |       _(optional)_       |
+|       forceMount        |             true \| undefined              |       _(optional)_       |
+|       alignOffset       |                   number                   |       _(optional)_       |
+|         insets          |                   Insets                   |       _(optional)_       |
+|     avoidCollisions     |                  boolean                   |       _(optional)_       |
+|          align          |        'start' \| 'center' \| 'end'        |       _(optional)_       |
+|          side           |             'top' \| 'bottom'              |       _(optional)_       |
+|       sideOffset        |                   number                   |       _(optional)_       |
+| disablePositioningStyle |                  boolean                   | Native Only _(optional)_ |
+|    collisionBoundary    | Element \| null \| Array\<Element \| null> |  Web Only _(optional)_   |
+|         sticky          |           'partial' \| 'always'            |  Web Only _(optional)_   |
+|    hideWhenDetached     |                  boolean                   |  Web Only _(optional)_   |
 
 ### useRootContext
 

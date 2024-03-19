@@ -2,13 +2,14 @@
 title: Popover
 description: Dynamic content within a portal, activated by a button press.
 ---
+
 {/* prettier-ignore-start */}
 {/* prettier-ignore-end */}
 
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/popover?raw';
+import importedCode from '@zemkit/reusables/components/ui/popover?raw';
 
 <LinkButton href='/primitives/popover'>Popover Primitive</LinkButton>
 <LinkButton href='/components/text'>Text Component</LinkButton>
@@ -23,7 +24,16 @@ Dynamic content within a portal, activated by a button press.
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/popover' className='text-white font-bold'> popover primitive</a> and the <a href='/components/text' className='text-white font-bold'>text component</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/popover' className='text-white font-bold'>
+    {' '}
+    popover primitive
+  </a>{' '}
+  and the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -36,21 +46,21 @@ Dynamic content within a portal, activated by a button press.
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 
@@ -85,9 +95,7 @@ function Example() {
           className='w-80'
         >
           <Text className='font-medium leading-none native:text-xl'>Dimensions</Text>
-          <Text className='text-sm text-muted-foreground'>
-            Set the dimensions for the layer.
-          </Text>
+          <Text className='text-sm text-muted-foreground'>Set the dimensions for the layer.</Text>
         </PopoverContent>
       </Popover>
     </View>
@@ -120,19 +128,19 @@ Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|         Prop         |        Type         |         Note          |
-| :------------------: | :-----------------: | :-------------------: |
-|       asChild        |       boolean       |     _(optional)_      |
-|      forceMount      |  true \| undefined  |     _(optional)_      |
-|       alignOffset       |                    number                    | Native Only _(optional)_       |
-|         insets          |                    Insets                    | Native Only _(optional)_       |
-|     avoidCollisions     |                   boolean                    | Native Only _(optional)_       |
-|          align          |         'start' \| 'center' \| 'end'         | Native Only _(optional)_       |
-|          side           |              'top' \| 'bottom'               | Native Only _(optional)_       |
-|       sideOffset        |                    number                    | Native Only _(optional)_       |
-| disablePositioningStyle |                   boolean                    | Native Only _(optional)_ |
-|   onOpenAutoFocus    | (ev: Event) => void | Web Only _(optional)_ |
-|   onCloseAutoFocus   | (ev: Event) => void | Web Only _(optional)_ |
-|   onEscapeKeyDown    | (ev: Event) => void | Web Only _(optional)_ |
-|  onInteractOutside   | (ev: Event) => void | Web Only _(optional)_ |
-| onPointerDownOutside | (ev: Event) => void | Web Only _(optional)_ |
+|          Prop           |             Type             |           Note           |
+| :---------------------: | :--------------------------: | :----------------------: |
+|         asChild         |           boolean            |       _(optional)_       |
+|       forceMount        |      true \| undefined       |       _(optional)_       |
+|       alignOffset       |            number            | Native Only _(optional)_ |
+|         insets          |            Insets            | Native Only _(optional)_ |
+|     avoidCollisions     |           boolean            | Native Only _(optional)_ |
+|          align          | 'start' \| 'center' \| 'end' | Native Only _(optional)_ |
+|          side           |      'top' \| 'bottom'       | Native Only _(optional)_ |
+|       sideOffset        |            number            | Native Only _(optional)_ |
+| disablePositioningStyle |           boolean            | Native Only _(optional)_ |
+|     onOpenAutoFocus     |     (ev: Event) => void      |  Web Only _(optional)_   |
+|    onCloseAutoFocus     |     (ev: Event) => void      |  Web Only _(optional)_   |
+|     onEscapeKeyDown     |     (ev: Event) => void      |  Web Only _(optional)_   |
+|    onInteractOutside    |     (ev: Event) => void      |  Web Only _(optional)_   |
+|  onPointerDownOutside   |     (ev: Event) => void      |  Web Only _(optional)_   |

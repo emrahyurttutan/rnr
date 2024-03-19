@@ -1,8 +1,8 @@
 import * as ContextMenu from '@radix-ui/react-context-menu';
 import * as React from 'react';
 import { GestureResponderEvent, Pressable, Text, View } from 'react-native';
-import * as Slot from '@rnr/slot';
-import { useAugmentedRef } from '@rnr/hooks';
+import * as Slot from '@zemkit/slot';
+import { useAugmentedRef } from '@zemkit/hooks';
 import type {
   ForceMountable,
   PositionedContentProps,
@@ -12,7 +12,7 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type {
   ContextMenuCheckboxItemProps,
   ContextMenuItemProps,
@@ -25,7 +25,7 @@ import type {
   ContextMenuSubProps,
   ContextMenuSubTriggerProps,
 } from './types';
-import { EmptyGestureResponderEvent } from '@rnr/utils';
+import { EmptyGestureResponderEvent } from '@zemkit/utils';
 
 const ContextMenuContext = React.createContext<ContextMenuRootProps | null>(null);
 

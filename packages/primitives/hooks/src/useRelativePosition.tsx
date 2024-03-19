@@ -5,7 +5,7 @@ import {
   type ScaledSize,
   type ViewStyle,
 } from 'react-native';
-import type { Insets } from '@rnr/types';
+import type { Insets } from '@zemkit/types';
 
 const POSITION_ABSOLUTE: ViewStyle = {
   position: 'absolute',

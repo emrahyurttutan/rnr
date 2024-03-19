@@ -9,12 +9,10 @@ description: A box that is a checked (ticked) indicator when activated.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/checkbox?raw';
+import importedCode from '@zemkit/reusables/components/ui/checkbox?raw';
 
-<LinkButton href="/primitives/checkbox">
-  Checkbox
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/checkbox">
+<LinkButton href='/primitives/checkbox'>Checkbox</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/checkbox'>
   Demo
 </LinkButton>
 
@@ -24,16 +22,19 @@ A box that is a checked (ticked) indicator when activated.
 
 ### Installation
 
-<Aside type="tip" title="Dependency">
-    Before copy/pasting, add the <a href="/primitives/checkbox" className='text-white font-bold'>checkbox primitive</a> to your project.
+<Aside type='tip' title='Dependency'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/checkbox' className='text-white font-bold'>
+    checkbox primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
 
 **Copy/paste the following code to `~/components/ui/checkbox.tsx`:**
 
-
-<Code code={importedCode} lang="tsx" title="~/components/ui/checkbox.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/checkbox.tsx' />
 
 ### Usage
 
@@ -41,12 +42,11 @@ A box that is a checked (ticked) indicator when activated.
 import { Checkbox } from '~/components/ui/checkbox';
 
 function Example() {
-  const [checked, setChecked] = React.useState(false); 
-  return (
-     <Checkbox checked={checked} onCheckedChange={setChecked} />
-  );
+  const [checked, setChecked] = React.useState(false);
+  return <Checkbox checked={checked} onCheckedChange={setChecked} />;
 }
 ```
+
 ## Props
 
 ### Checkbox

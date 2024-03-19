@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/dialog",
+  "name": "@zemkit/dialog",
   "version": "0.0.0",
   "description": "Primitive dialog",
   "license": "MIT",
@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*",
-    "@rnr/portal": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*",
+    "@zemkit/portal": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

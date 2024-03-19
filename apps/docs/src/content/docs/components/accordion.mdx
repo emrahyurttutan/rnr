@@ -9,15 +9,11 @@ description: A vertically stacked set of interactive headings that each reveal a
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/accordion?raw';
+import importedCode from '@zemkit/reusables/components/ui/accordion?raw';
 
-<LinkButton href="/primitives/accordion">
-  Accordion Primitive
-</LinkButton>
-<LinkButton href="/components/text">
-  Text Component
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/accordion">
+<LinkButton href='/primitives/accordion'>Accordion Primitive</LinkButton>
+<LinkButton href='/components/text'>Text Component</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/accordion'>
   Demo
 </LinkButton>
 
@@ -27,16 +23,23 @@ A vertically stacked set of interactive headings that each reveal a section of c
 
 ### Installation
 
-<Aside type="tip" title="Dependencies">
-    Before copy/pasting, add the <a href="/primitives/accordion" className='text-white font-bold'>accordion primitive</a> and the <a href="/components/text" className='text-white font-bold'>text component</a> to your project.
+<Aside type='tip' title='Dependencies'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/accordion' className='text-white font-bold'>
+    accordion primitive
+  </a>{' '}
+  and the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
 
 **Copy/paste the following code to `~/components/ui/accordion.tsx`:**
 
-
-<Code code={importedCode} lang="tsx" title="~/components/ui/accordion.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/accordion.tsx' />
 
 ### Usage
 
@@ -51,35 +54,36 @@ import { Text } from '~/components/ui/typography';
 
 function Example() {
   return (
-      <Accordion
-        type='multiple'
-        collapsible
-        defaultValue={['item-1']}
-        className='w-full max-w-sm native:max-w-md'
-      >
-        <AccordionItem value='item-1'>
-          <AccordionTrigger>
-            <Text>Is it accessible?</Text>
-          </AccordionTrigger>
-          <AccordionContent>
-            <Text>Yes. It adheres to the WAI-ARIA design pattern.</Text>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value='item-2'>
-          <AccordionTrigger>
-            <Text>What are universal components?</Text>
-          </AccordionTrigger>
-          <AccordionContent>
-            <Text>
-              In the world of React Native, universal components are components that work on both
-              web and native platforms.
-            </Text>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+    <Accordion
+      type='multiple'
+      collapsible
+      defaultValue={['item-1']}
+      className='w-full max-w-sm native:max-w-md'
+    >
+      <AccordionItem value='item-1'>
+        <AccordionTrigger>
+          <Text>Is it accessible?</Text>
+        </AccordionTrigger>
+        <AccordionContent>
+          <Text>Yes. It adheres to the WAI-ARIA design pattern.</Text>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value='item-2'>
+        <AccordionTrigger>
+          <Text>What are universal components?</Text>
+        </AccordionTrigger>
+        <AccordionContent>
+          <Text>
+            In the world of React Native, universal components are components that work on both web
+            and native platforms.
+          </Text>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   );
 }
 ```
+
 ## Props
 
 ### Accordion

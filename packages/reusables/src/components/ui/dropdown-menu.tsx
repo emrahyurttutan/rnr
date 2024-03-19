@@ -2,7 +2,7 @@ import { Check, ChevronDown, ChevronRight, ChevronUp } from '../../components/Ic
 import * as React from 'react';
 import { Platform, StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { TextClassContext } from './text';
-import * as DropdownMenuPrimitive from '@rnr/dropdown-menu';
+import * as DropdownMenuPrimitive from '@zemkit/dropdown-menu';
 import { cn } from '../../lib/utils';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;

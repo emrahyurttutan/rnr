@@ -1,15 +1,15 @@
 import * as Tooltip from '@radix-ui/react-tooltip';
 import * as React from 'react';
 import { Pressable, View, type GestureResponderEvent } from 'react-native';
-import { useAugmentedRef, useControllableState } from '@rnr/hooks';
-import * as Slot from '@rnr/slot';
+import { useAugmentedRef, useControllableState } from '@zemkit/hooks';
+import * as Slot from '@zemkit/slot';
 import type {
   PositionedContentProps,
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type {
   RootContext,
   TooltipOverlayProps,

@@ -12,7 +12,7 @@ import { X } from '../../components/Icons';
 import React, { useCallback } from 'react';
 import { GestureResponderEvent, Keyboard, Pressable, View, ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import { Button } from '../../components/deprecated-ui/button';
 import { cn } from '../../lib/utils';
 

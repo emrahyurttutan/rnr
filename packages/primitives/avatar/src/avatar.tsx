@@ -6,8 +6,8 @@ import {
   Image as RNImage,
   View,
 } from 'react-native';
-import * as Slot from '@rnr/slot';
-import { ComponentPropsWithAsChild, SlottableViewProps, ViewRef } from '@rnr/types';
+import * as Slot from '@zemkit/slot';
+import { ComponentPropsWithAsChild, SlottableViewProps, ViewRef } from '@zemkit/types';
 import { AvatarImageProps, AvatarRootProps } from './types';
 
 type AvatarState = 'loading' | 'error' | 'loaded';

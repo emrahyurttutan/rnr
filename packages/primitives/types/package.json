@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/types",
+  "name": "@zemkit/types",
   "version": "0.0.0",
   "description": "Primitive types",
   "license": "MIT",

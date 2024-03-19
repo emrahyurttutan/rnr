@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/accordion",
+  "name": "@zemkit/accordion",
   "version": "0.0.0",
   "description": "Primitive accordion",
   "license": "MIT",
@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

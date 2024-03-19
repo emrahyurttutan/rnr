@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Pressable, View } from 'react-native';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 
 const Root = React.forwardRef<ViewRef, SlottableViewProps>(({ asChild, ...props }, ref) => {
   const Component = asChild ? Slot.View : View;

@@ -2,7 +2,7 @@ import { X } from '../../components/Icons';
 import * as React from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
-import * as DialogPrimitive from '@rnr/dialog';
+import * as DialogPrimitive from '@zemkit/dialog';
 import { cn } from '../../lib/utils';
 
 const Dialog = DialogPrimitive.Root;

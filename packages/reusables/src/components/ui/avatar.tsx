@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as AvatarPrimitive from '@rnr/avatar';
+import * as AvatarPrimitive from '@zemkit/avatar';
 import { cn } from '../../lib/utils';
 
 const Avatar = React.forwardRef<

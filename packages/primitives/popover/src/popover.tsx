@@ -1,13 +1,13 @@
-import { useControllableState, useRelativePosition, type LayoutPosition } from '@rnr/hooks';
-import { Portal as RNPPortal } from '@rnr/portal';
-import * as Slot from '@rnr/slot';
+import { useControllableState, useRelativePosition, type LayoutPosition } from '@zemkit/hooks';
+import { Portal as RNPPortal } from '@zemkit/portal';
+import * as Slot from '@zemkit/slot';
 import type {
   PositionedContentProps,
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import * as React from 'react';
 import {
   BackHandler,

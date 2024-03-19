@@ -1,4 +1,4 @@
-import { DeprecatedUi } from '@rnr/reusables';
+import { DeprecatedUi } from '@zemkit/reusables';
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import { Code } from '~/components/Icons';

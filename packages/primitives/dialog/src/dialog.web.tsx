@@ -1,6 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import { useAugmentedRef, useControllableState } from '@rnr/hooks';
-import * as Slot from '@rnr/slot';
+import { useAugmentedRef, useControllableState } from '@zemkit/hooks';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
@@ -8,7 +8,7 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import * as React from 'react';
 import { Pressable, Text, View, type GestureResponderEvent } from 'react-native';
 import type {

@@ -9,12 +9,10 @@ description: An image component featuring an alternative representation for depi
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/avatar?raw';
+import importedCode from '@zemkit/reusables/components/ui/avatar?raw';
 
-<LinkButton href="/primitives/avatar">
-  Avatar Primitive
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/avatar">
+<LinkButton href='/primitives/avatar'>Avatar Primitive</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/avatar'>
   Demo
 </LinkButton>
 
@@ -24,16 +22,19 @@ An image component featuring an alternative representation for depicting the use
 
 ### Installation
 
-<Aside type="tip" title="Dependency">
-    Before copy/pasting, add the <a href="/primitives/avatar" className='text-white font-bold'>avatar primitive</a> to your project.
+<Aside type='tip' title='Dependency'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/avatar' className='text-white font-bold'>
+    avatar primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
 
 **Copy/paste the following code to `~/components/ui/avatar.tsx`:**
 
-
-<Code code={importedCode} lang="tsx" title="~/components/ui/avatar.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/avatar.tsx' />
 
 ### Usage
 
@@ -45,15 +46,16 @@ const GITHUB_AVATAR_URI = 'https://github.com/mrzachnugent.png';
 
 function Example() {
   return (
-     <Avatar alt="Zach Nugent's Avatar">
-        <AvatarImage source={{ uri: GITHUB_AVATAR_URI }} />
-        <AvatarFallback>
-          <Text>ZN</Text>
-        </AvatarFallback>
-      </Avatar>
+    <Avatar alt="Zach Nugent's Avatar">
+      <AvatarImage source={{ uri: GITHUB_AVATAR_URI }} />
+      <AvatarFallback>
+        <Text>ZN</Text>
+      </AvatarFallback>
+    </Avatar>
   );
 }
 ```
+
 ## Props
 
 ### Avatar
@@ -69,9 +71,9 @@ Extends [`View`](https://reactnative.dev/docs/view#props) props
 
 Extends [`Image`](https://reactnative.dev/docs/image) props except `alt`
 
-|   Prop   |  Type   |     Note     |
-| :------: | :-----: | :----------: |
-| asChild  | boolean | _(optional)_ |
+|  Prop   |  Type   |     Note     |
+| :-----: | :-----: | :----------: |
+| asChild | boolean | _(optional)_ |
 
 ### AvatarFallback
 

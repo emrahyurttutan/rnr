@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/slider",
+  "name": "@zemkit/slider",
   "version": "0.0.0",
   "description": "Primitive slider",
   "license": "MIT",
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slider": "^1.1.2",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

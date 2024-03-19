@@ -9,9 +9,9 @@ description: Shows an skeleton component.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/skeleton?raw';
+import importedCode from '@zemkit/reusables/components/ui/skeleton?raw';
 
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/skeleton">
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/skeleton'>
   Demo
 </LinkButton>
 
@@ -23,7 +23,7 @@ Shows an skeleton component.
 
 **Copy/paste the following code to `~/components/ui/skeleton.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/ui/skeleton.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/skeleton.tsx' />
 
 ## Usage
 
@@ -31,9 +31,7 @@ Shows an skeleton component.
 import { Skeleton } from '~/components/ui/skeleton';
 
 function Example() {
-  return (
-     <Skeleton className='h-12 w-12 rounded-full' />
-  );
+  return <Skeleton className='h-12 w-12 rounded-full' />;
 }
 ```
 
@@ -42,4 +40,3 @@ function Example() {
 ### Skeleton
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props except for `style`.
-        

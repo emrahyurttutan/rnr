@@ -1,18 +1,15 @@
 import * as React from 'react';
 import { Pressable, View, type GestureResponderEvent } from 'react-native';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type { SwitchRootProps } from './types';
 
-const Root = React.forwardRef<
-  PressableRef,
-  SlottablePressableProps & SwitchRootProps
->(
+const Root = React.forwardRef<PressableRef, SlottablePressableProps & SwitchRootProps>(
   (
     {
       asChild,
@@ -53,12 +50,10 @@ const Root = React.forwardRef<
 
 Root.displayName = 'RootNativeSwitch';
 
-const Thumb = React.forwardRef<ViewRef, SlottableViewProps>(
-  ({ asChild, ...props }, ref) => {
-    const Component = asChild ? Slot.View : View;
-    return <Component ref={ref} role='presentation' {...props} />;
-  }
-);
+const Thumb = React.forwardRef<ViewRef, SlottableViewProps>(({ asChild, ...props }, ref) => {
+  const Component = asChild ? Slot.View : View;
+  return <Component ref={ref} role='presentation' {...props} />;
+});
 
 Thumb.displayName = 'ThumbNativeSwitch';
 

@@ -2,13 +2,14 @@
 title: Hover Card
 description: Allows users with vision to preview the content hidden behind an element before hovering or pressing.
 ---
+
 {/* prettier-ignore-start */}
 {/* prettier-ignore-end */}
 
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/hover-card?raw';
+import importedCode from '@zemkit/reusables/components/ui/hover-card?raw';
 
 <LinkButton href='/primitives/hover-card'>Hover Card Primitive</LinkButton>
 <LinkButton target='_blank' href='https://rnr-showcase.vercel.app/hover-card'>
@@ -22,7 +23,12 @@ Allows users with vision to preview the content hidden behind an element before 
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/hover-card' className='text-white font-bold'> hover-card primitive</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/hover-card' className='text-white font-bold'>
+    {' '}
+    hover-card primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -35,21 +41,21 @@ Allows users with vision to preview the content hidden behind an element before 
 
 <Aside type="caution">
 
-  Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
+Requires a `<PortalHost />` as the last child of your `<Root/>` (`app/_layout.tsx`) component
 
-  ```tsx
-  import { PortalHost } from '~/components/primitives/portal';
+```tsx
+import { PortalHost } from '~/components/primitives/portal';
 
-  function Root() {
-    return (
-      <>
-        <Stack />
-        {/* Default Portal Host (one per app) */}
-        <PortalHost />
-      </>
-    );
-  }
-  ```
+function Root() {
+  return (
+    <>
+      <Stack />
+      {/* Default Portal Host (one per app) */}
+      <PortalHost />
+    </>
+  );
+}
+```
 
 </Aside>
 
@@ -104,13 +110,13 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|     open     |         boolean          |       _(optional)_      |
-| onOpenChange | (value: boolean) => void |       _(optional)_      |
-| defaultOpen  |         boolean          |       _(optional)_      |
-|   asChild    |         boolean          |       _(optional)_      |
-|  relativeTo  | 'longPress' \| 'trigger' | Native Only_(optional)_ |
+|     Prop     |           Type           |          Note           |
+| :----------: | :----------------------: | :---------------------: |
+|     open     |         boolean          |      _(optional)_       |
+| onOpenChange | (value: boolean) => void |      _(optional)_       |
+| defaultOpen  |         boolean          |      _(optional)_       |
+|   asChild    |         boolean          |      _(optional)_       |
+|  relativeTo  | 'longPress' \| 'trigger' | Native Only*(optional)* |
 
 ### HoverCardTrigger
 
@@ -124,17 +130,17 @@ Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|          Prop           |                     Type                     |           Note           |
-| :---------------------: | :------------------------------------------: | :----------------------: |
-|         asChild         |                   boolean                    |       _(optional)_       |
-|       forceMount        |              true \| undefined               |       _(optional)_       |
-|       alignOffset       |                    number                    |       _(optional)_       |
-|         insets          |                    Insets                    |       _(optional)_       |
-|     avoidCollisions     |                   boolean                    |       _(optional)_       |
-|          align          |         'start' \| 'center' \| 'end'         |       _(optional)_       |
-|          side           |              'top' \| 'bottom'               |       _(optional)_       |
-|       sideOffset        |                    number                    |       _(optional)_       |
-| disablePositioningStyle |                   boolean                    | Native Only _(optional)_ |
-|    collisionBoundary    |  Element \| null \| Array\<Element \| null>  |  Web Only _(optional)_   |
-|         sticky          |            'partial' \| 'always'             |  Web Only _(optional)_   |
-|    hideWhenDetached     |                   boolean                    |  Web Only _(optional)_   |
+|          Prop           |                    Type                    |           Note           |
+| :---------------------: | :----------------------------------------: | :----------------------: |
+|         asChild         |                  boolean                   |       _(optional)_       |
+|       forceMount        |             true \| undefined              |       _(optional)_       |
+|       alignOffset       |                   number                   |       _(optional)_       |
+|         insets          |                   Insets                   |       _(optional)_       |
+|     avoidCollisions     |                  boolean                   |       _(optional)_       |
+|          align          |        'start' \| 'center' \| 'end'        |       _(optional)_       |
+|          side           |             'top' \| 'bottom'              |       _(optional)_       |
+|       sideOffset        |                   number                   |       _(optional)_       |
+| disablePositioningStyle |                  boolean                   | Native Only _(optional)_ |
+|    collisionBoundary    | Element \| null \| Array\<Element \| null> |  Web Only _(optional)_   |
+|         sticky          |           'partial' \| 'always'            |  Web Only _(optional)_   |
+|    hideWhenDetached     |                  boolean                   |  Web Only _(optional)_   |

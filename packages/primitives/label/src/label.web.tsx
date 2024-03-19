@@ -1,11 +1,11 @@
 import * as Label from '@radix-ui/react-label';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
   SlottableTextProps,
   TextRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import * as React from 'react';
 import { Text as RNText } from 'react-native';
 import type { LabelRootProps, LabelTextProps } from './types';

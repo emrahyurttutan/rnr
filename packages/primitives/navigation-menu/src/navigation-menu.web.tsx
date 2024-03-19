@@ -1,16 +1,16 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import * as React from 'react';
 import { GestureResponderEvent, Pressable, View } from 'react-native';
-import { useAugmentedRef } from '@rnr/hooks';
-import * as Slot from '@rnr/slot';
+import { useAugmentedRef } from '@zemkit/hooks';
+import * as Slot from '@zemkit/slot';
 import type {
   PositionedContentProps,
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
-import { EmptyGestureResponderEvent } from '@rnr/utils';
+} from '@zemkit/types';
+import { EmptyGestureResponderEvent } from '@zemkit/utils';
 import type {
   NavigationMenuItemProps,
   NavigationMenuLinkProps,

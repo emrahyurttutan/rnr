@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/hooks",
+  "name": "@zemkit/hooks",
   "version": "0.0.0",
   "description": "Primitive hooks",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "clean": "rm -rf node_modules"
   },
   "dependencies": {
-    "@rnr/types": "*"
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

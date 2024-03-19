@@ -9,9 +9,9 @@ description: Shows an textarea component.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/textarea?raw';
+import importedCode from '@zemkit/reusables/components/ui/textarea?raw';
 
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/textarea">
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/textarea'>
   Demo
 </LinkButton>
 
@@ -23,7 +23,7 @@ Shows an textarea component.
 
 **Copy/paste the following code to `~/components/ui/textarea.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/ui/textarea.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/textarea.tsx' />
 
 ## Usage
 
@@ -34,13 +34,13 @@ import { Text } from '~/components/ui/text';
 function Example() {
   const [value, setValue] = React.useState('');
   return (
-      <Textarea
-        ref={inputRef}
-        placeholder='Write some stuff...'
-        value={value}
-        onChangeText={setValue}
-        aria-labelledby='textareaLabel'
-      />
+    <Textarea
+      ref={inputRef}
+      placeholder='Write some stuff...'
+      value={value}
+      onChangeText={setValue}
+      aria-labelledby='textareaLabel'
+    />
   );
 }
 ```
@@ -50,4 +50,3 @@ function Example() {
 ### Textarea
 
 Extends [`Text Input`](https://reactnative.dev/docs/textinput#props) props
-        

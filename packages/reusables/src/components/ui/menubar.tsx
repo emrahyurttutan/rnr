@@ -2,7 +2,7 @@ import { Check, ChevronDown, ChevronRight, ChevronUp } from '../../components/Ic
 import * as React from 'react';
 import { Platform, Text, View } from 'react-native';
 import { TextClassContext } from './text';
-import * as MenubarPrimitive from '@rnr/menubar';
+import * as MenubarPrimitive from '@zemkit/menubar';
 import { cn } from '../../lib/utils';
 
 const MenubarMenu = MenubarPrimitive.Menu;

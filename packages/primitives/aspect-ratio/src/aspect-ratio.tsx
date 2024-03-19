@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, type ViewStyle } from 'react-native';
-import * as Slot from '@rnr/slot';
-import type { SlottableViewProps } from '@rnr/types';
+import * as Slot from '@zemkit/slot';
+import type { SlottableViewProps } from '@zemkit/types';
 
 interface AspectRatioRootProps {
   ratio?: number;

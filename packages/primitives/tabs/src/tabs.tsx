@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Pressable, View, type GestureResponderEvent } from 'react-native';
-import * as Slot from '@rnr/slot';
-import type { ComponentPropsWithAsChild, SlottableViewProps, ViewRef } from '@rnr/types';
+import * as Slot from '@zemkit/slot';
+import type { ComponentPropsWithAsChild, SlottableViewProps, ViewRef } from '@zemkit/types';
 import type { TabsContentProps, TabsRootProps } from './types';
 
 interface RootContext extends TabsRootProps {

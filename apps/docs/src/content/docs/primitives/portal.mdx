@@ -9,9 +9,9 @@ description: Portals let you render its children into a different part of your a
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside, Card } from '@astrojs/starlight/components';
-import importedPortalCode from '@/../node_modules/@rnr/portal/src/portal.tsx?raw';
+import importedPortalCode from '@/../node_modules/@zemkit/portal/src/portal.tsx?raw';
 
-<LinkButton target="_blank" href="https://github.com/pmndrs/zustand">
+<LinkButton target='_blank' href='https://github.com/pmndrs/zustand'>
   Zustand
 </LinkButton>
 
@@ -35,12 +35,13 @@ Portals let you render its children into a different part of your app.
 npx expo install zustand
 ```
 
-**Copy/paste the following code to  `~/components/primitives/portal.tsx`**
+**Copy/paste the following code to `~/components/primitives/portal.tsx`**
 
-<Code code={importedPortalCode} lang="tsx" title="~/components/primitives/portal.tsx" />
+<Code code={importedPortalCode} lang='tsx' title='~/components/primitives/portal.tsx' />
 
 <Aside>
-  On the web, it is recommended to use [createPortal](https://react.dev/reference/react-dom/createPortal) from `react-dom` instead.
+  On the web, it is recommended to use
+  [createPortal](https://react.dev/reference/react-dom/createPortal) from `react-dom` instead.
 </Aside>
 
 ## Usage
@@ -86,9 +87,7 @@ function Card() {
           ]}
         >
           <View>
-            <Text style={{ color: 'white' }}>
-              I am centered and overlay the entier screen
-            </Text>
+            <Text style={{ color: 'white' }}>I am centered and overlay the entier screen</Text>
           </View>
         </View>
       </Portal>
@@ -125,13 +124,13 @@ function Example() {
 
 By default, children of all Portal components will be rendered as its own children.
 
-| Prop |       Type        |                   Note                   |
-| :--: | :---------------: | :--------------------------------------: |
-| name | string  | Provide when it is used as a custom host _(optional)_ |
+| Prop |  Type  |                         Note                          |
+| :--: | :----: | :---------------------------------------------------: |
+| name | string | Provide when it is used as a custom host _(optional)_ |
 
 ### Portal
 
-|   Prop   |       Type        |                                         Note                                          |
-| :------: | :---------------: | :-----------------------------------------------------------------------------------: |
-|   name*  | string            | Unique value otherwise the portal with the same name will replace the original portal |
-| hostName | string            | Provide when its children are to be rendered in a custom host   _(optional)_            |
+|   Prop   |  Type  |                                         Note                                          |
+| :------: | :----: | :-----------------------------------------------------------------------------------: |
+|  name\*  | string | Unique value otherwise the portal with the same name will replace the original portal |
+| hostName | string |      Provide when its children are to be rendered in a custom host _(optional)_       |

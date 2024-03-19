@@ -79,7 +79,7 @@ export default function Screen() {
               </Animated.View>
             </LayoutAnimationConfig>
           </View>
-          <Progress value={progress} className='h-2' indicatorClassName='bg-sky-600' />
+          <Progress value={progress} className='h-2' />
           <View />
           <Button
             variant='outline'

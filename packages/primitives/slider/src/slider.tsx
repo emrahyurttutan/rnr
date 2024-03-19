@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { View } from 'react-native';
-import * as Slot from '@rnr/slot';
-import type {
-  SlottableViewProps,
-  ViewRef,
-} from '@rnr/types';
+import * as Slot from '@zemkit/slot';
+import type { SlottableViewProps, ViewRef } from '@zemkit/types';
 import type { SliderRootProps } from './types';
 
 const RootContext = React.createContext<SliderRootProps | null>(null);
@@ -39,50 +36,42 @@ Root.displayName = 'RootNativeSlider';
 function useSliderContext() {
   const context = React.useContext(RootContext);
   if (context === null) {
-    throw new Error(
-      'Slider compound components cannot be rendered outside the Slider component'
-    );
+    throw new Error('Slider compound components cannot be rendered outside the Slider component');
   }
   return context;
 }
 
-const Track = React.forwardRef<ViewRef, SlottableViewProps>(
-  ({ asChild, ...props }, ref) => {
-    const { value, min, max, disabled } = useSliderContext();
+const Track = React.forwardRef<ViewRef, SlottableViewProps>(({ asChild, ...props }, ref) => {
+  const { value, min, max, disabled } = useSliderContext();
 
-    const Component = asChild ? Slot.View : View;
-    return (
-      <Component
-        ref={ref}
-        aria-disabled={disabled}
-        role='slider'
-        aria-valuemin={min}
-        aria-valuemax={max}
-        aria-valuenow={value}
-        accessibilityValue={{ max, min, now: value }}
-        {...props}
-      />
-    );
-  }
-);
+  const Component = asChild ? Slot.View : View;
+  return (
+    <Component
+      ref={ref}
+      aria-disabled={disabled}
+      role='slider'
+      aria-valuemin={min}
+      aria-valuemax={max}
+      aria-valuenow={value}
+      accessibilityValue={{ max, min, now: value }}
+      {...props}
+    />
+  );
+});
 
 Track.displayName = 'TrackNativeSlider';
 
-const Range = React.forwardRef<ViewRef, SlottableViewProps>(
-  ({ asChild, ...props }, ref) => {
-    const Component = asChild ? Slot.View : View;
-    return <Component ref={ref} role='presentation' {...props} />;
-  }
-);
+const Range = React.forwardRef<ViewRef, SlottableViewProps>(({ asChild, ...props }, ref) => {
+  const Component = asChild ? Slot.View : View;
+  return <Component ref={ref} role='presentation' {...props} />;
+});
 
 Range.displayName = 'RangeNativeSlider';
 
-const Thumb = React.forwardRef<ViewRef, SlottableViewProps>(
-  ({ asChild, ...props }, ref) => {
-    const Component = asChild ? Slot.View : View;
-    return <Component accessibilityRole='adjustable' ref={ref} {...props} />;
-  }
-);
+const Thumb = React.forwardRef<ViewRef, SlottableViewProps>(({ asChild, ...props }, ref) => {
+  const Component = asChild ? Slot.View : View;
+  return <Component accessibilityRole='adjustable' ref={ref} {...props} />;
+});
 
 Thumb.displayName = 'ThumbNativeSlider';
 

@@ -9,9 +9,9 @@ description: Shows an input component.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/input?raw';
+import importedCode from '@zemkit/reusables/components/ui/input?raw';
 
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/input">
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/input'>
   Demo
 </LinkButton>
 
@@ -23,7 +23,7 @@ Shows an input component.
 
 **Copy/paste the following code to `~/components/ui/input.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/ui/input.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/input.tsx' />
 
 ## Usage
 
@@ -34,13 +34,13 @@ import { Text } from '~/components/ui/text';
 function Example() {
   const [value, setValue] = React.useState('');
   return (
-      <Input
-        placeholder='Write some stuff...'
-        value={value}
-        onChangeText={onChangeText}
-        aria-labelledbyledBy='inputLabel'
-        aria-errormessage='inputError'
-      />
+    <Input
+      placeholder='Write some stuff...'
+      value={value}
+      onChangeText={onChangeText}
+      aria-labelledbyledBy='inputLabel'
+      aria-errormessage='inputError'
+    />
   );
 }
 ```
@@ -50,4 +50,3 @@ function Example() {
 ### Input
 
 Extends [`Text Input`](https://reactnative.dev/docs/textinput#props) props
-        

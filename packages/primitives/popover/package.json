@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/popover",
+  "name": "@zemkit/popover",
   "version": "0.0.0",
   "description": "Primitive popover",
   "license": "MIT",
@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.0.7",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*",
-    "@rnr/portal": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*",
+    "@zemkit/portal": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

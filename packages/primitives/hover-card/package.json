@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/hover-card",
+  "name": "@zemkit/hover-card",
   "version": "0.0.0",
   "description": "Primitive hover card",
   "license": "MIT",
@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.7",
-    "@rnr/popover": "*",
-    "@rnr/slot": "*",
-    "@rnr/hooks": "*",
-    "@rnr/portal": "*",
-    "@rnr/types": "*"
+    "@zemkit/popover": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/hooks": "*",
+    "@zemkit/portal": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

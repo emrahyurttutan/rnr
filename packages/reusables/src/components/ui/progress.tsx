@@ -7,7 +7,7 @@ import Animated, {
   useDerivedValue,
   withSpring,
 } from 'react-native-reanimated';
-import * as ProgressPrimitive from '@rnr/progress';
+import * as ProgressPrimitive from '@zemkit/progress';
 import { cn } from '../../lib/utils';
 
 const Progress = React.forwardRef<

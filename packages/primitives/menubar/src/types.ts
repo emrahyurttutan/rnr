@@ -1,4 +1,4 @@
-import { ForceMountable } from '@rnr/types';
+import { ForceMountable } from '@zemkit/types';
 
 interface MenubarRootProps {
   value: string | undefined;

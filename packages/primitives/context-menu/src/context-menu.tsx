@@ -9,9 +9,9 @@ import {
   type LayoutChangeEvent,
   type LayoutRectangle,
 } from 'react-native';
-import { useRelativePosition, type LayoutPosition } from '@rnr/hooks';
-import { Portal as RNPPortal } from '@rnr/portal';
-import * as Slot from '@rnr/slot';
+import { useRelativePosition, type LayoutPosition } from '@zemkit/hooks';
+import { Portal as RNPPortal } from '@zemkit/portal';
+import * as Slot from '@zemkit/slot';
 import type {
   ForceMountable,
   PositionedContentProps,
@@ -21,7 +21,7 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type {
   ContextMenuCheckboxItemProps,
   ContextMenuItemProps,

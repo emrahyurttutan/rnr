@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/collapsible",
+  "name": "@zemkit/collapsible",
   "version": "0.0.0",
   "description": "Primitive collapsible",
   "license": "MIT",
@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.0.3",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/label",
+  "name": "@zemkit/label",
   "version": "0.0.0",
   "description": "Primitive label",
   "license": "MIT",
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.0.2",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

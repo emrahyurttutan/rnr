@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/dropdown-menu",
+  "name": "@zemkit/dropdown-menu",
   "version": "0.0.0",
   "description": "Primitive dropdown menu",
   "license": "MIT",
@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.0.6",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*",
-    "@rnr/utils": "*",
-    "@rnr/portal": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*",
+    "@zemkit/utils": "*",
+    "@zemkit/portal": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

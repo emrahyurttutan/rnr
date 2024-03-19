@@ -1,7 +1,7 @@
 import { AlignCenter, AlignLeft, Bold, Italic } from '~/components/Icons';
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import * as Toolbar from '@rnr/toolbar';
+import * as Toolbar from '@zemkit/toolbar';
 import { cn } from '~/lib/utils';
 
 export default function ToolbarScreen() {

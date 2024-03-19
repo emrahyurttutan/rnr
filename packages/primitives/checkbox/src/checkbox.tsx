@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { GestureResponderEvent, Pressable, View } from 'react-native';
-import * as Slot from '@rnr/slot';
-import type { ComponentPropsWithAsChild, PressableRef, SlottablePressableProps } from '@rnr/types';
+import * as Slot from '@zemkit/slot';
+import type {
+  ComponentPropsWithAsChild,
+  PressableRef,
+  SlottablePressableProps,
+} from '@zemkit/types';
 import type { CheckboxIndicator, CheckboxRootProps } from './types';
 
 interface RootContext extends CheckboxRootProps {

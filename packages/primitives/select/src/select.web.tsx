@@ -1,6 +1,6 @@
 import * as Select from '@radix-ui/react-select';
-import { useAugmentedRef, useControllableState } from '@rnr/hooks';
-import * as Slot from '@rnr/slot';
+import { useAugmentedRef, useControllableState } from '@zemkit/hooks';
+import * as Slot from '@zemkit/slot';
 import type {
   ForceMountable,
   PositionedContentProps,
@@ -10,7 +10,7 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import * as React from 'react';
 import { Pressable, Text, View } from 'react-native';
 import type {

@@ -9,16 +9,11 @@ description: Accessible styled texts with an inheritance system.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
-import importedTextCode from '@rnr/reusables/components/ui/text?raw';
+import importedTextCode from '@zemkit/reusables/components/ui/text?raw';
 
-
-<LinkButton href="/primitives/slot">
-  Slot primitive
-</LinkButton>
-<LinkButton href="/primitives/types">
-  Types primitive
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/typography">
+<LinkButton href='/primitives/slot'>Slot primitive</LinkButton>
+<LinkButton href='/primitives/types'>Types primitive</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/typography'>
   Demo
 </LinkButton>
 
@@ -28,13 +23,21 @@ Styled text component and inheritance system.
 
 ## Installation
 
-<Aside type="tip" title="Dependencies">
-    Before copy/pasting, add the <a href="/primitives/slot" className='text-white font-bold'>slot primitive</a> and <a href="/primitives/types" className='text-white font-bold'>types primitive</a> to your project.
+<Aside type='tip' title='Dependencies'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/slot' className='text-white font-bold'>
+    slot primitive
+  </a>{' '}
+  and{' '}
+  <a href='/primitives/types' className='text-white font-bold'>
+    types primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 **Copy/paste the following code to `~/components/ui/text.tsx`:**
 
-<Code code={importedTextCode} lang="tsx" title="~/components/ui/text.tsx" />
+<Code code={importedTextCode} lang='tsx' title='~/components/ui/text.tsx' />
 
 #### Props
 
@@ -56,8 +59,9 @@ The `Text` component applies the styles from the `TextClassContext` to the React
 
 The algorithm used to determine which styles to apply is based on the following order of specificity:
 
-<Aside title="Info">
-    Ordered from highest to lowest specificity. ClassNames with higher specificity will override those with lower specificity.
+<Aside title='Info'>
+  Ordered from highest to lowest specificity. ClassNames with higher specificity will override those
+  with lower specificity.
 </Aside>
 
 **Order of specificity:**
@@ -75,59 +79,57 @@ The algorithm used to determine which styles to apply is based on the following 
   import { Parent } from './Parent';
   import { OtherParent } from './OtherParent';
 
-  function Screen(){
-    return (
-        <>
-        {/* Default behavior without a parent `TextClassContext.Provider` */}
-        <Text>The applied className is foreground</Text>
-        <Parent>
-            {/* Inherits the `TextClassContext.Provider` value from the `Parent` component and overrides the default `Text` component `className` */}
-            <Text>The applied className is text-red-500</Text>
-            {/* This `className` will override the `TextClassContext.Provider` value */}
-            <Text className="text-blue-500">The applied className is text-blue-500</Text>
-            <OtherParent>
-                {/* Inherits the `TextClassContext.Provider` value from the `OtherParent` component overrides the `TextClassContext.Provider` value from the `Parent` */}
-                <Text>The applied className is text-purple-500</Text>
-            </OtherParent>
-        </Parent>
-        </>
-    )
-   }
-    ```
+function Screen(){
+return (
+<>
+{/* Default behavior without a parent `TextClassContext.Provider` */}
+<Text>The applied className is foreground</Text>
+<Parent>
+{/* Inherits the `TextClassContext.Provider` value from the `Parent` component and overrides the default `Text` component `className` */}
+<Text>The applied className is text-red-500</Text>
+{/* This `className` will override the `TextClassContext.Provider` value */}
+<Text className="text-blue-500">The applied className is text-blue-500</Text>
+<OtherParent>
+{/* Inherits the `TextClassContext.Provider` value from the `OtherParent` component overrides the `TextClassContext.Provider` value from the `Parent` */}
+<Text>The applied className is text-purple-500</Text>
+</OtherParent>
+</Parent>
+</>
+)
+}
+```
+
   </TabItem>
   <TabItem label="Parent.tsx">
   ```tsx
   import { TextClassContext } from '~/components/ui/typography';
 
-  export function Parent({ children }) {
-    return (
-        <TextClassContext.Provider value="text-red-500">
-            <View>
-                {children}
-            </View>
-        </TextClassContext.Provider>
-    )
-   } 
-  ```
-  </TabItem>
-  <TabItem label="OtherParent.tsx">
-  ```tsx
-  import { TextClassContext } from '~/components/ui/typography';
+export function Parent({ children }) {
+return (
+<TextClassContext.Provider value="text-red-500">
+<View>
+{children}
+</View>
+</TextClassContext.Provider>
+)
+}
 
-  export function OtherParent({ children }) {
-    return (
-        <TextClassContext.Provider value="text-purple-500">
-            <View>
-                {children}
-            </View>
-        </TextClassContext.Provider>
-    )
-   }
-  ```
+````
+</TabItem>
+<TabItem label="OtherParent.tsx">
+```tsx
+import { TextClassContext } from '~/components/ui/typography';
+
+export function OtherParent({ children }) {
+  return (
+      <TextClassContext.Provider value="text-purple-500">
+          <View>
+              {children}
+          </View>
+      </TextClassContext.Provider>
+  )
+ }
+````
+
   </TabItem>
 </Tabs>
-
-
-
-
-

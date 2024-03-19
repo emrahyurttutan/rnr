@@ -1,4 +1,4 @@
-import type { ForceMountable } from '@rnr/types';
+import type { ForceMountable } from '@zemkit/types';
 
 interface TabsRootProps {
   value: string;

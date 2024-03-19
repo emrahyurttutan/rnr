@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/tooltip",
+  "name": "@zemkit/tooltip",
   "version": "0.0.0",
   "description": "Primitive tooltip",
   "license": "MIT",
@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*",
-    "@rnr/portal": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*",
+    "@zemkit/portal": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

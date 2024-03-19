@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/portal",
+  "name": "@zemkit/portal",
   "version": "0.0.0",
   "description": "Primitive portal",
   "license": "MIT",

@@ -9,7 +9,7 @@ description: A group of selectable buttons, commonly referred to as radio button
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/radio-group?raw';
+import importedCode from '@zemkit/reusables/components/ui/radio-group?raw';
 
 <LinkButton href='/primitives/radio-group'>Radio Group Primitive</LinkButton>
 <LinkButton target='_blank' href='https://rnr-showcase.vercel.app/radio-group'>
@@ -23,7 +23,12 @@ A group of selectable buttons, commonly referred to as radio buttons, wherein on
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/radio-group' className='text-white font-bold'> radio group primitive</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/radio-group' className='text-white font-bold'>
+    {' '}
+    radio group primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -83,19 +88,19 @@ function RadioGroupItemWithLabel({
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop      |                 Type                 |     Note     |
-| :-----------: | :----------------------------------: | :----------: |
-|     value     |         string \| undefined          |              |
-| onValueChange |        (val: string) => void         |              |
-|    asChild    |               boolean                | _(optional)_ |
-|   disabled    |               boolean                | _(optional)_ |
+|     Prop      |         Type          |     Note     |
+| :-----------: | :-------------------: | :----------: |
+|     value     |  string \| undefined  |              |
+| onValueChange | (val: string) => void |              |
+|    asChild    |        boolean        | _(optional)_ |
+|   disabled    |        boolean        | _(optional)_ |
 
 ### RadioGroupItem
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| value | string |  |
-| aria-labelledby | string | Its label's `nativeID`|
-| asChild | boolean | _(optional)_ |
+|      Prop       |  Type   |          Note          |
+| :-------------: | :-----: | :--------------------: |
+|      value      | string  |                        |
+| aria-labelledby | string  | Its label's `nativeID` |
+|     asChild     | boolean |      _(optional)_      |

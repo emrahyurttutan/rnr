@@ -9,16 +9,11 @@ description: Accessible styled typography components with an inheritance system.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside, TabItem, Tabs } from '@astrojs/starlight/components';
-import importedTypographyCode from '@rnr/reusables/components/ui/typography?raw';
+import importedTypographyCode from '@zemkit/reusables/components/ui/typography?raw';
 
-
-<LinkButton href="/primitives/slot">
-  Slot primitive
-</LinkButton>
-<LinkButton href="/primitives/types">
-  Types primitive
-</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/typography">
+<LinkButton href='/primitives/slot'>Slot primitive</LinkButton>
+<LinkButton href='/primitives/types'>Types primitive</LinkButton>
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/typography'>
   Demo
 </LinkButton>
 
@@ -40,13 +35,21 @@ Semantic and styled typography components.
 
 ## Installation
 
-<Aside type="tip" title="Dependencies">
-    Before copy/pasting, add the <a href="/primitives/slot" className='text-white font-bold'>slot primitive</a> and <a href="/primitives/types" className='text-white font-bold'>types primitive</a> to your project.
+<Aside type='tip' title='Dependencies'>
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/slot' className='text-white font-bold'>
+    slot primitive
+  </a>{' '}
+  and{' '}
+  <a href='/primitives/types' className='text-white font-bold'>
+    types primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 **Copy/paste the following code to `~/components/ui/typography.tsx`:**
 
-<Code code={importedTypographyCode} lang="tsx" title="~/components/ui/typography.tsx" />
+<Code code={importedTypographyCode} lang='tsx' title='~/components/ui/typography.tsx' />
 
 #### Props and usage
 

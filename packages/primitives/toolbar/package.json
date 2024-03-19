@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/toolbar",
+  "name": "@zemkit/toolbar",
   "version": "0.0.0",
   "description": "Primitive toolbar",
   "license": "MIT",
@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@radix-ui/react-toolbar": "^1.0.4",
-    "@rnr/slot": "*",
-    "@rnr/types": "*",
-    "@rnr/utils": "*"
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*",
+    "@zemkit/utils": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

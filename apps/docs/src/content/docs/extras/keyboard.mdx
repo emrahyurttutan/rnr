@@ -8,7 +8,7 @@ description: A hook for observing the state of the keyboard
 
 import Code from '@/components/Code.astro';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/lib/keyboard?raw';
+import importedCode from '@zemkit/reusables/lib/keyboard?raw';
 
 A hook for observing the state of the keyboard
 
@@ -16,8 +16,7 @@ A hook for observing the state of the keyboard
 
 **Copy/paste the following code to `~/lib/keyboard.tsx`**:
 
-
-<Code code={importedCode} lang="tsx" title="~/lib/keyboard.tsx" />
+<Code code={importedCode} lang='tsx' title='~/lib/keyboard.tsx' />
 
 ### Usage
 
@@ -32,12 +31,12 @@ function Example() {
   console.log({ isKeyboardVisible, keyboardHeight });
 
   function onChangeText(text: string) {
-    console.log("text", text);
+    console.log('text', text);
     if (text === 'dismiss') {
       dismissKeyboard();
     }
   }
 
-  return <Input onChangeText={onChangeText} />
+  return <Input onChangeText={onChangeText} />;
 }
 ```

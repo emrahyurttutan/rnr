@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/progress",
+  "name": "@zemkit/progress",
   "version": "0.0.0",
   "description": "Primitive progress",
   "license": "MIT",
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@radix-ui/react-progress": "^1.0.3",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

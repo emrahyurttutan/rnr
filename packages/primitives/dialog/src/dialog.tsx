@@ -1,6 +1,6 @@
-import { useControllableState } from '@rnr/hooks';
-import { Portal as RNPPortal } from '@rnr/portal';
-import * as Slot from '@rnr/slot';
+import { useControllableState } from '@zemkit/hooks';
+import { Portal as RNPPortal } from '@zemkit/portal';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
@@ -8,7 +8,7 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import * as React from 'react';
 import { BackHandler, GestureResponderEvent, Pressable, Text, View } from 'react-native';
 import type {

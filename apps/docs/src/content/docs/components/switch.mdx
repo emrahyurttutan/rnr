@@ -9,7 +9,7 @@ description: A control enabling the user to switch between a checked and uncheck
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/switch?raw';
+import importedCode from '@zemkit/reusables/components/ui/switch?raw';
 
 <LinkButton href='/primitives/switch'>Switch Primitive</LinkButton>
 <LinkButton target='_blank' href='https://rnr-showcase.vercel.app/switch'>
@@ -23,7 +23,11 @@ A control enabling the user to switch between a checked and unchecked state.
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/switch' className='text-white font-bold'>switch primitive</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/switch' className='text-white font-bold'>
+    switch primitive
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -69,9 +73,9 @@ function Example() {
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|     checked     |   boolean         |  |
-|     onCheckedChange     |   (checked: boolean) => void         |  |
-|   disabled   |         boolean          | _(optional)_ |
-| onKeyDown | (ev: React.KeyboardEvent) => void | Web Only _(optional)_ |
+|      Prop       |               Type                |         Note          |
+| :-------------: | :-------------------------------: | :-------------------: |
+|     checked     |              boolean              |                       |
+| onCheckedChange |    (checked: boolean) => void     |                       |
+|    disabled     |              boolean              |     _(optional)_      |
+|    onKeyDown    | (ev: React.KeyboardEvent) => void | Web Only _(optional)_ |

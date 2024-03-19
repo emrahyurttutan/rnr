@@ -5,7 +5,7 @@ import { GestureResponderEvent, Modal, Pressable, Text, View } from 'react-nativ
 import Animated, { FadeInUp, SlideInUp } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKeyboard } from '../../lib/keyboard';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import { cn, isTextChildren } from '../../lib/utils';
 import { Button } from './button';
 import { Input } from './input';

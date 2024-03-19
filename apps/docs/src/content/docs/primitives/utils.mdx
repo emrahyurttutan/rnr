@@ -8,7 +8,7 @@ description: A collection of utilities for the core primitives.
 
 import Code from '@/components/Code.astro';
 import { Aside, Card } from '@astrojs/starlight/components';
-import importedCode from '@/../node_modules/@rnr/utils/src/index.ts?raw';
+import importedCode from '@/../node_modules/@zemkit/utils/src/index.ts?raw';
 
 A collection of utilities for core primitives.
 
@@ -21,9 +21,9 @@ A collection of utilities for core primitives.
 
 ## Installation
 
-**Copy/paste the following code to  `~/components/primitives/utils.tsx`**
+**Copy/paste the following code to `~/components/primitives/utils.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/primitives/utils.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/primitives/utils.tsx' />
 
 ## Usage
 
@@ -85,25 +85,22 @@ import { EmptyGestureResponderEvent } from '~/components/primitives/hooks';
 import { PressableRef, SlottablePressableProps } from '~/components/primitives/types';
 
 const Item = React.forwardRef<PressableRef, SlottablePressableProps>(
-  ({  onPress: onPressProp, onKeyDown: onKeyDownProp, ...props }, ref) => {
-
+  ({ onPress: onPressProp, onKeyDown: onKeyDownProp, ...props }, ref) => {
     function onKeyDown(ev: React.KeyboardEvent) {
       if (ev.key === 'Enter' || ev.key === ' ') {
         onKeyDownProp?.(ev);
         onPressProp?.(EmptyGestureResponderEvent);
-        console.log("onKeyDown Enter or Space");
+        console.log('onKeyDown Enter or Space');
       }
     }
 
     function onPress(ev: GestureResponderEvent) {
       onPressProp?.(ev);
-      console.log("onPress");
+      console.log('onPress');
     }
 
     const Component = asChild ? Slot.Pressable : Pressable;
-    return (
-        <Pressable ref={ref} onPress={onPress} onKeyDown={onKeyDown} {...props} />
-    );
+    return <Pressable ref={ref} onPress={onPress} onKeyDown={onKeyDown} {...props} />;
   }
 );
 ```

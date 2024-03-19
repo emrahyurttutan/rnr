@@ -10,7 +10,7 @@ Crafted with [NativeWind v4](https://www.nativewind.dev/v4/overview) and accessi
 
 https://github.com/mrzachnugent/react-native-reusables/assets/63797719/ae7e074f-05a4-4568-b71a-f1e0be13650d
 
-**📖 Read the docs** _(wip)_: https://rnr-docs.vercel.app/ 
+**📖 Read the docs** _(wip)_: https://rnr-docs.vercel.app/
 
 **🌐 Try the web showcase:** https://rnr-showcase.vercel.app/
 
@@ -22,17 +22,16 @@ https://github.com/mrzachnugent/react-native-reusables/assets/63797719/ae7e074f-
 
 2. Copy/paste what you need into your project (2 options)
 
-    - Follow instructions in [docs](https://rnr-docs.vercel.app/) **(work in progress)**
-    - Browse [`packages/reusables/src/components/ui/*`](packages/reusables/src/components/ui)
-      1. Copy file in your project to `~/components/ui/*`
-      2. If it uses a primitive, replace `@rnr/*` with `~/components/primitives/*`
-      3. Copy the primitive to `~/components/primitives/*`
-        - _If the primitive uses other primitives repeat steps 2 and 3._
-
+   - Follow instructions in [docs](https://rnr-docs.vercel.app/) **(work in progress)**
+   - Browse [`packages/reusables/src/components/ui/*`](packages/reusables/src/components/ui)
+     1. Copy file in your project to `~/components/ui/*`
+     2. If it uses a primitive, replace `@zemkit/*` with `~/components/primitives/*`
+     3. Copy the primitive to `~/components/primitives/*`
+     - _If the primitive uses other primitives repeat steps 2 and 3._
 
 **For this repository:**
 
-1. Clone the repo: `git clone https://github.com/mrzachnugent/react-native-reusables.git` 
+1. Clone the repo: `git clone https://github.com/mrzachnugent/react-native-reusables.git`
 
 2. Change directory into the cloned repo: `cd react-native-reusables`
 
@@ -52,7 +51,7 @@ https://github.com/mrzachnugent/react-native-reusables/assets/63797719/ae7e074f-
 
 ### Templates
 
-**Starter-base:** 
+**Starter-base:**
 
 <img src="https://github.com/mrzachnugent/react-native-reusables/assets/63797719/42c94108-38a7-498b-9c70-18640420f1bc"
      alt="starter-base-template"
@@ -64,16 +63,16 @@ Follow [instructions](https://rnr-docs.vercel.app/getting-started/initial-setup/
 
 - NativeWind v4
 - Dark and light mode
-    - Android Navigation Bar matches mode
-    - Persistant mode
+  - Android Navigation Bar matches mode
+  - Persistant mode
 - Common components
-    - Icons, ThemeToggle, Avatar, Button, Card, Progress, Text, Tooltip
+  - Icons, ThemeToggle, Avatar, Button, Card, Progress, Text, Tooltip
 
 ### Backlog
 
 - **[Documentation Project](https://github.com/users/mrzachnugent/projects/1)**
-   <br>
-   _Backlog for documentation. If you'd like to contribute, assign yourself the issue and track its progression in the project's backlog._
+  <br>
+  _Backlog for documentation. If you'd like to contribute, assign yourself the issue and track its progression in the project's backlog._
 
 - **Add missing universal components**
   <br>
@@ -90,5 +89,4 @@ Follow [instructions](https://rnr-docs.vercel.app/getting-started/initial-setup/
 
 [See screenshots](/packages/reusables/src/components/deprecated-ui/README.md)
 
-The first draft of components with little to no focus on the web. The code remains for those who may still want to use it. 
-
+The first draft of components with little to no focus on the web. The code remains for those who may still want to use it.

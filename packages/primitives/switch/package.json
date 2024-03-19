@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/switch",
+  "name": "@zemkit/switch",
   "version": "0.0.0",
   "description": "Primitive switch",
   "license": "MIT",
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@radix-ui/react-switch": "^1.0.3",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

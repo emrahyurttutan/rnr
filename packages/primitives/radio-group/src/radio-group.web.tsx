@@ -1,14 +1,14 @@
 import * as RadioGroup from '@radix-ui/react-radio-group';
 import * as React from 'react';
 import { GestureResponderEvent, Pressable, View } from 'react-native';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   ForceMountable,
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
+} from '@zemkit/types';
 import type { RadioGroupItemProps, RadioGroupRootProps } from './types';
 const RadioGroupContext = React.createContext<RadioGroupRootProps | null>(null);
 const Root = React.forwardRef<ViewRef, SlottableViewProps & RadioGroupRootProps>(

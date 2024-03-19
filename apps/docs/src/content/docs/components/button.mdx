@@ -9,13 +9,11 @@ description: Shows a button component.
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/button?raw';
+import importedCode from '@zemkit/reusables/components/ui/button?raw';
 
-<LinkButton href="/primitives/types">
-  Types Primitives
-</LinkButton>
+<LinkButton href='/primitives/types'>Types Primitives</LinkButton>
 <LinkButton href='/components/text'>Text Component</LinkButton>
-<LinkButton target="_blank" href="https://rnr-showcase.vercel.app/button">
+<LinkButton target='_blank' href='https://rnr-showcase.vercel.app/button'>
   Demo
 </LinkButton>
 
@@ -25,14 +23,17 @@ Shows a button component.
 
 ## Installation
 
-<Aside type="tip" title="Dependencies">
-  Before copy/pasting, add the <a href='/components/text' className='text-white font-bold'>text component</a> to your project.
+<Aside type='tip' title='Dependencies'>
+  Before copy/pasting, add the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
-
 
 **Copy/paste the following code to `~/components/ui/button.tsx`**
 
-<Code code={importedCode} lang="tsx" title="~/components/ui/button.tsx" />
+<Code code={importedCode} lang='tsx' title='~/components/ui/button.tsx' />
 
 ## Usage
 
@@ -42,9 +43,9 @@ import { Text } from '~/components/ui/text';
 
 function Example() {
   return (
-      <Button>
-        <Text>Default</Text>
-      </Button>
+    <Button>
+      <Text>Default</Text>
+    </Button>
   );
 }
 ```
@@ -55,8 +56,7 @@ function Example() {
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-| Prop  |  Type  |             Note             |
-| :---: | :----: | :--------------------------: |
+|  Prop   |                                    Type                                     |     Note     |
+| :-----: | :-------------------------------------------------------------------------: | :----------: |
 | variant | 'default' \| 'destructive' \| 'secondary' \| 'link' \| 'outline' \| 'ghost' | _(optional)_ |
-| size | 'default' \| 'sm' \| 'lg' \| 'icon' | _(optional)_ |
-        
+|  size   |                     'default' \| 'sm' \| 'lg' \| 'icon'                     | _(optional)_ |

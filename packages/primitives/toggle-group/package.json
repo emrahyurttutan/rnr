@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/toggle-group",
+  "name": "@zemkit/toggle-group",
   "version": "0.0.0",
   "description": "Primitive toggle group",
   "license": "MIT",
@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@radix-ui/react-toggle-group": "^1.0.4",
-    "@rnr/utils": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/utils": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

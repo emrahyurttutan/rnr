@@ -9,7 +9,7 @@ description: A collection of buttons with true or false states, which can be act
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/toggle-group?raw';
+import importedCode from '@zemkit/reusables/components/ui/toggle-group?raw';
 
 <LinkButton href='/primitives/toggle-group'>Toggle Group Primitive</LinkButton>
 <LinkButton href='/components/text'>Text Component</LinkButton>
@@ -24,7 +24,15 @@ A collection of buttons with true or false states, which can be activated or dea
 ### Installation
 
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/toggle-group' className='text-white font-bold'>toggle group primitive</a> and the <a href='/components/text' className='text-white font-bold'>text component</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/toggle-group' className='text-white font-bold'>
+    toggle group primitive
+  </a>{' '}
+  and the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -60,7 +68,6 @@ function Example() {
     </View>
   );
 }
-
 ```
 
 ## Props
@@ -69,33 +76,33 @@ function Example() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|   Prop   |  Type   |     Note     |
-| :------: | :-----: | :----------: |
-| type  | 'single' \| 'multiple' | |
-| value  | string \| undefined \| string[] | |
-| onValueChange  | (val: string \| undefined \| string[]) => void | |
-| asChild  | boolean | _(optional)_ |
-| disabled  | boolean | _(optional)_ |
-| rovingFocus  | boolean | Web only _(optional)_ |
-| orientation  | 'horizontal' \| 'vertical' | Web only _(optional)_ |
-| dir  | 'ltr' \| 'rtl' | Web only _(optional)_ |
-| ltr  | boolean | Web only _(optional)_ |
+|     Prop      |                      Type                      |         Note          |
+| :-----------: | :--------------------------------------------: | :-------------------: |
+|     type      |             'single' \| 'multiple'             |                       |
+|     value     |        string \| undefined \| string[]         |                       |
+| onValueChange | (val: string \| undefined \| string[]) => void |                       |
+|    asChild    |                    boolean                     |     _(optional)_      |
+|   disabled    |                    boolean                     |     _(optional)_      |
+|  rovingFocus  |                    boolean                     | Web only _(optional)_ |
+|  orientation  |           'horizontal' \| 'vertical'           | Web only _(optional)_ |
+|      dir      |                 'ltr' \| 'rtl'                 | Web only _(optional)_ |
+|      ltr      |                    boolean                     | Web only _(optional)_ |
 
 ### ToggleGroupItem
 
 Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
-|    Prop    |        Type        |     Note     |
-| :--------: | :----------------: | :----------: |
-| value | string |  |
-|  asChild   |      boolean       | _(optional)_ |
-| variant | 'default' \| 'outline' | _(optional)_ |
-| size | 'default' \| 'sm' \| 'lg' | _(optional)_ |
+|  Prop   |           Type            |     Note     |
+| :-----: | :-----------------------: | :----------: |
+|  value  |          string           |              |
+| asChild |          boolean          | _(optional)_ |
+| variant |  'default' \| 'outline'   | _(optional)_ |
+|  size   | 'default' \| 'sm' \| 'lg' | _(optional)_ |
 
 ### ToggleIcon
 
 Extends [`LucideIcon`](https://lucide.dev/guide/packages/lucide-react-native#props) props
 
-|    Prop    |        Type        |     Note     |
-| :--------: | :----------------: | :----------: |
-|  icon   |      LucideIcon       |              |
+| Prop |    Type    | Note |
+| :--: | :--------: | :--: |
+| icon | LucideIcon |      |

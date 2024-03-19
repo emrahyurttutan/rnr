@@ -1,5 +1,5 @@
 ---
-title: Tabs 
+title: Tabs
 description: A collection of layered content sections, referred to as tab panels, displayed individually.
 ---
 
@@ -9,7 +9,7 @@ description: A collection of layered content sections, referred to as tab panels
 import Code from '@/components/Code.astro';
 import { LinkButton } from '@/components/react/LinkButton';
 import { Aside } from '@astrojs/starlight/components';
-import importedCode from '@rnr/reusables/components/ui/tabs?raw';
+import importedCode from '@zemkit/reusables/components/ui/tabs?raw';
 
 <LinkButton href='/primitives/tabs'>Tabs Primitive</LinkButton>
 <LinkButton href='/components/text'>Text Component</LinkButton>
@@ -23,9 +23,17 @@ A collection of layered content sections, referred to as tab panels, displayed i
 
 ### Installation
 
-
 <Aside type='tip' title='Dependencies'>
-  Before copy/pasting, add the <a href='/primitives/tabs' className='text-white font-bold'> tabs primitive</a> and the <a href='/components/text' className='text-white font-bold'>text component</a> to your project.
+  Before copy/pasting, add the{' '}
+  <a href='/primitives/tabs' className='text-white font-bold'>
+    {' '}
+    tabs primitive
+  </a>{' '}
+  and the{' '}
+  <a href='/components/text' className='text-white font-bold'>
+    text component
+  </a>{' '}
+  to your project.
 </Aside>
 
 <br />
@@ -124,7 +132,6 @@ export default function TabsScreen() {
     </View>
   );
 }
-
 ```
 
 ## Props
@@ -133,15 +140,15 @@ export default function TabsScreen() {
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|     Prop     |           Type           |     Note     |
-| :----------: | :----------------------: | :----------: |
-|     value     |   string         | |
-| onValueChange | (value: string ) => void |  |
-| asChild | boolean | _(optional)_ |
-|   disabled   |         boolean          | _(optional)_ |
-| orientation | 'horizontal' \| 'vertical' | Web Only _(optional)_ |
-| dir | 'ltr' \| 'rtl' | Web Only _(optional)_ |
-| activationMode | 'automatic' \| 'manual' | Web Only _(optional)_ |
+|      Prop      |            Type            |         Note          |
+| :------------: | :------------------------: | :-------------------: |
+|     value      |           string           |                       |
+| onValueChange  |  (value: string ) => void  |                       |
+|    asChild     |          boolean           |     _(optional)_      |
+|    disabled    |          boolean           |     _(optional)_      |
+|  orientation   | 'horizontal' \| 'vertical' | Web Only _(optional)_ |
+|      dir       |       'ltr' \| 'rtl'       | Web Only _(optional)_ |
+| activationMode |  'automatic' \| 'manual'   | Web Only _(optional)_ |
 
 ### TabsList
 
@@ -163,8 +170,8 @@ Extends [`Pressable`](https://reactnative.dev/docs/pressable#props) props
 
 Extends [`View`](https://reactnative.dev/docs/view#props) props
 
-|  Prop   |  Type   |     Note     |
-| :-----: | :-----: | :----------: |
-| value | string |  |
+|    Prop    |  Type   |     Note     |
+| :--------: | :-----: | :----------: |
+|   value    | string  |              |
 | forceMount | boolean | _(optional)_ |
-| asChild | boolean | _(optional)_ |
+|  asChild   | boolean | _(optional)_ |

@@ -12,5 +12,5 @@ export function fixImports(rawfile: string) {
     .replace('./text', '~/components/ui/text')
     .replaceAll('../../components', '~/components')
     .replaceAll('../../lib', '~/lib')
-    .replaceAll('@rnr', '~/components/primitives');
+    .replaceAll('@zemkit', '~/components/primitives');
 }

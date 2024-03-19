@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/select",
+  "name": "@zemkit/select",
   "version": "0.0.0",
   "description": "Primitive select",
   "license": "MIT",
@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.0.0",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*",
-    "@rnr/portal": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*",
+    "@zemkit/portal": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

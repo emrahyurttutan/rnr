@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/checkbox",
+  "name": "@zemkit/checkbox",
   "version": "0.0.0",
   "description": "Primitive checkbox",
   "license": "MIT",
@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
-    "@rnr/hooks": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

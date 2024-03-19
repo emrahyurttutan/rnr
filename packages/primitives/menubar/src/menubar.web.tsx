@@ -1,8 +1,8 @@
 import * as Menubar from '@radix-ui/react-menubar';
 import * as React from 'react';
 import { GestureResponderEvent, Pressable, Text, View } from 'react-native';
-import { useAugmentedRef } from '@rnr/hooks';
-import * as Slot from '@rnr/slot';
+import { useAugmentedRef } from '@zemkit/hooks';
+import * as Slot from '@zemkit/slot';
 import type {
   ForceMountable,
   PositionedContentProps,
@@ -12,8 +12,8 @@ import type {
   SlottableViewProps,
   TextRef,
   ViewRef,
-} from '@rnr/types';
-import { EmptyGestureResponderEvent } from '@rnr/utils';
+} from '@zemkit/types';
+import { EmptyGestureResponderEvent } from '@zemkit/utils';
 import type {
   MenubarCheckboxItemProps,
   MenubarItemProps,

@@ -1,14 +1,14 @@
 import * as Toolbar from '@radix-ui/react-toolbar';
 import * as React from 'react';
 import { Pressable, View, type GestureResponderEvent } from 'react-native';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import type {
   PressableRef,
   SlottablePressableProps,
   SlottableViewProps,
   ViewRef,
-} from '@rnr/types';
-import { ToggleGroupUtils } from '@rnr/utils';
+} from '@zemkit/types';
+import { ToggleGroupUtils } from '@zemkit/utils';
 import type { ToolbarRootProps, ToolbarToggleGroupProps, ToolbarToggleItem } from './types';
 
 const Root = React.forwardRef<ViewRef, SlottableViewProps & ToolbarRootProps>(

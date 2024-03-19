@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/slot",
+  "name": "@zemkit/slot",
   "version": "0.0.0",
   "description": "Primitive slot",
   "license": "MIT",

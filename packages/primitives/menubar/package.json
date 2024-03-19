@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@rnr/menubar",
+  "name": "@zemkit/menubar",
   "version": "0.0.0",
   "description": "Primitive menubar",
   "license": "MIT",
@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@radix-ui/react-menubar": "^1.0.4",
-    "@rnr/hooks": "*",
-    "@rnr/utils": "*",
-    "@rnr/slot": "*",
-    "@rnr/types": "*",
-    "@rnr/portal": "*"
+    "@zemkit/hooks": "*",
+    "@zemkit/utils": "*",
+    "@zemkit/slot": "*",
+    "@zemkit/types": "*",
+    "@zemkit/portal": "*"
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

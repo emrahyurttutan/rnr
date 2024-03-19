@@ -1,9 +1,12 @@
 {
-  "name": "@rnr/monorepo",
+  "name": "@zemkit/monorepo",
   "private": true,
   "scripts": {
     "dev": "turbo dev",
     "dev:docs": "turbo dev --filter=docs",
+    "dev:starting": "turbo dev --filter=starting --concurrency 32",
+    "dev:starting:android": "turbo dev:android --filter=showcase --concurrency 32",
+    "dev:starting:web": "turbo dev:web --filter=starting --concurrency 32",
     "dev:showcase": "turbo dev --filter=showcase --concurrency 32",
     "dev:showcase:android": "turbo dev:android --filter=showcase --concurrency 32",
     "dev:showcase:web": "turbo dev:web --filter=showcase --concurrency 32",
@@ -15,7 +18,7 @@
     "build": "turbo build",
     "build:showcase": "turbo build --filter=showcase",
     "build:docs": "turbo build --filter=docs",
-    "clean": "rm -rf .turbo node_modules && turbo clean"
+    "clean": "turbo clean && rm -rf .turbo node_modules "
   },
   "devDependencies": {
     "turbo": "^1.12.4",

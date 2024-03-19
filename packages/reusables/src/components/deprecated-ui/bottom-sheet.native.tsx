@@ -18,7 +18,7 @@ import { GestureResponderEvent, Keyboard, Pressable, View, ViewStyle } from 'rea
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { X } from '../../components/Icons';
 import { Button } from '../../components/deprecated-ui/button';
-import * as Slot from '@rnr/slot';
+import * as Slot from '@zemkit/slot';
 import { useColorScheme } from '../../lib/useColorScheme';
 import { cn } from '../../lib/utils';
 

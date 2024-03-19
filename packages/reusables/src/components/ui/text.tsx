@@ -1,5 +1,5 @@
-import * as Slot from '@rnr/slot';
-import { SlottableTextProps, TextRef } from '@rnr/types';
+import * as Slot from '@zemkit/slot';
+import { SlottableTextProps, TextRef } from '@zemkit/types';
 import * as React from 'react';
 import { Text as RNText } from 'react-native';
 import { cn } from '../../lib/utils';
